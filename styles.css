@@ -546,27 +546,6 @@ table.pt td .sp{display:block;font-size:10px;color:var(--muted-2);font-weight:50
 .due-row.warn span,.due-row.warn b{color:var(--red)}
 .due-note{font-size:10.5px;color:var(--muted-2);margin-top:9px;line-height:1.6}
 
-/* ---------- 후기 ---------- */
-.rev-sec{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.rev-grid{display:grid;gap:9px}
-@media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
-.rev{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px}
-.rev .stars{color:#F5A623;font-size:11px;letter-spacing:1px}
-.rev p{font-size:12px;color:#3D4E68;line-height:1.65;margin:7px 0 9px}
-.rev .who{display:flex;align-items:center;justify-content:space-between;font-size:10.5px;color:var(--muted-2)}
-.rev .who b{color:#5B6B85;font-weight:700}
-
-/* ---------- FAQ ---------- */
-.faq{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
-.faq details{border-bottom:1px solid var(--line-2)}
-.faq details:last-child{border-bottom:0}
-.faq summary{list-style:none;cursor:pointer;padding:15px 18px;font-size:13.5px;font-weight:700;color:var(--navy);letter-spacing:-.025em;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-size:17px;color:#9AA6BA;font-weight:400;line-height:1;flex:0 0 auto}
-.faq details[open] summary::after{content:"−";color:var(--blue)}
-.faq details p{padding:0 18px 15px;font-size:12.5px;color:var(--muted);line-height:1.78;max-width:780px}
-.faq details p b{color:var(--navy);font-weight:700}
-
 /* ---------- CTA / 푸터 ---------- */
 .cta-band{background:var(--navy-2);color:#fff;padding:38px 0}
 .cta-in{display:flex;flex-direction:column;gap:16px;align-items:flex-start}

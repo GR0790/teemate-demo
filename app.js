@@ -9,8 +9,10 @@
   const TEE  = "M200 40 C185 40 172 46 163 57 L104 74 C86 83 72 97 65 115 L45 196 C41 208 47 220 59 223 L96 233 C106 236 113 229 114 219 L96 190 L96 386 C96 396 104 404 115 404 L285 404 C296 404 304 396 304 386 L304 190 L286 219 C287 229 294 236 304 233 L341 223 C353 220 359 208 355 196 L335 115 C328 97 314 83 296 74 L237 57 C228 46 215 40 200 40 Z";
   const LONG = "M200 40 C185 40 172 46 163 57 L104 74 C88 88 78 108 74 130 L56 292 C54 306 60 316 72 318 L98 322 C106 323 110 317 110 308 L96 190 L96 386 C96 396 104 404 115 404 L285 404 C296 404 304 396 304 386 L304 190 L290 308 C290 317 294 323 302 322 L328 318 C340 316 346 306 344 292 L326 130 C322 108 312 88 296 74 L237 57 C228 46 215 40 200 40 Z";
   const VEST = "M200 46 C184 46 171 52 162 62 L122 76 C136 100 148 124 152 150 C156 178 138 200 106 206 L106 380 C106 390 114 398 125 398 L275 398 C286 398 294 390 294 380 L294 206 C262 200 244 178 248 150 C252 124 264 100 278 76 L238 62 C229 52 216 46 200 46 Z";
-  const CAP  = "M124 250 C122 190 156 148 200 148 C244 148 278 190 276 250 Z";
-  const CAP_BRIM = "M100 250 C100 270 148 288 200 288 C252 288 300 270 300 250 C300 238 262 234 200 234 C138 234 100 238 100 250 Z";
+  const CAP  = "M104 282 C100 250 104 218 112 196 C120 172 132 156 148 147 C164 139 182 136 200 136 C218 136 236 139 252 147 C268 156 280 172 288 196 C296 218 300 250 296 282 C252 263 148 263 104 282 Z";
+  const CAP_BRIM = "M104 282 C148 263 252 263 296 282 C302 290 301 309 293 316 C285 321 272 318 258 312 C240 305 160 305 142 312 C128 318 115 321 107 316 C99 309 98 290 104 282 Z";
+  const CAP_SEAMSHADE = "M104 282 C148 263 252 263 296 282 L296 292 C252 273 148 273 104 292 Z";
+  const CAP_BACK = "M104 282 C100 250 104 218 112 196 C120 172 132 156 148 147 C164 139 182 136 200 136 C218 136 236 139 252 147 C268 156 280 172 288 196 C296 218 300 250 296 282 C290 296 250 303 200 303 C150 303 110 296 104 282 Z";
 
   const neckRib = '<path d="M163 57 C174 78 226 78 237 57" fill="none" stroke="DET" stroke-width="2.6" stroke-linecap="round"/><path d="M170 60 C179 72 221 72 230 60" fill="none" stroke="DET2" stroke-width="1.2"/>';
   const hemTee  = '<path d="M98 390 L302 390" stroke="DET2" stroke-width="1.4" fill="none"/><path d="M98 398 L302 398" stroke="DET2" stroke-width="1" fill="none" stroke-dasharray="5 4"/>';
@@ -48,9 +50,9 @@
       front:'<path d="M166 62 C166 74 178 82 200 82 C222 82 234 74 234 62 L234 48 C234 42 224 38 214 38 L186 38 C176 38 166 42 166 48 Z" fill="DET3" stroke="DET" stroke-width="1.5"/><path d="M200 82 L200 402" stroke="DET" stroke-width="2"/><g fill="DET"><circle cx="200" cy="110" r="3"/><circle cx="200" cy="152" r="3"/><circle cx="200" cy="194" r="3"/></g><path d="M40 292 L82 309" stroke="DET" stroke-width="2.4"/><path d="M360 292 L318 309" stroke="DET" stroke-width="2.4"/><path d="M98 386 L302 386" stroke="DET" stroke-width="2.4"/><path d="M98 396 L302 396" stroke="DET" stroke-width="2.4"/><path d="M114 330 C130 322 140 322 150 330" stroke="DET2" stroke-width="1.3" fill="none"/><path d="M286 330 C270 322 260 322 250 330" stroke="DET2" stroke-width="1.3" fill="none"/>',
       back:backNeck+'<path d="M200 70 L200 402" stroke="DET2" stroke-width="1.1"/><path d="M98 386 L302 386" stroke="DET" stroke-width="2.4"/><path d="M98 396 L302 396" stroke="DET" stroke-width="2.4"/>',
       anchor:{chest:{x:152,y:230},back:{x:200,y:256},sleeve:{x:66,y:200,rot:-12}}},
-    cap:{name:'모자', base:6900, spec:'볼캡 · 스냅백 · 자수 기본', fabric:'면 트윌', size:'FREE', body:CAP, extra:CAP_BRIM, cap:true,
-      front:'<path d="M152 246 C158 204 176 168 200 152" stroke="DET2" stroke-width="1.2" fill="none"/><path d="M248 246 C242 204 224 168 200 152" stroke="DET2" stroke-width="1.2" fill="none"/><path d="M200 150 L200 250" stroke="DET2" stroke-width="1" opacity=".45"/><path d="M100 250 C100 270 148 288 200 288 C252 288 300 270 300 250" stroke="DET" stroke-width="1.8" fill="none"/><path d="M112 264 C128 276 160 282 200 282 C240 282 272 276 288 264" stroke="DET2" stroke-width="1" fill="none" opacity=".5"/><circle cx="200" cy="145" r="5" fill="DET3" stroke="DET" stroke-width="1.4"/><circle cx="168" cy="206" r="2.2" fill="DET"/><circle cx="232" cy="206" r="2.2" fill="DET"/>',
-      back:'<path d="M124 250 C122 190 156 148 200 148 C244 148 278 190 276 250" fill="none" stroke="DET" stroke-width="1.5"/><path d="M152 246 C158 204 176 168 200 152" stroke="DET2" stroke-width="1.2" fill="none"/><path d="M248 246 C242 204 224 168 200 152" stroke="DET2" stroke-width="1.2" fill="none"/><circle cx="200" cy="145" r="5" fill="DET3" stroke="DET" stroke-width="1.4"/>',
+    cap:{name:'모자', base:6900, spec:'볼캡 · 스냅백 · 자수 기본', fabric:'면 트윌', size:'FREE', body:CAP, cap:true,
+      front:'<path d="M200 140 C197 180 199 220 200 258" stroke="DET2" stroke-width="1.2" fill="none"/><path d="M197 141 C186 180 166 218 154 250" stroke="DET2" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".5"/><path d="M203 141 C214 180 234 218 246 250" stroke="DET2" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="200" cy="135" r="6.4" fill="DET3" stroke="DET" stroke-width="1.5"/><circle cx="164" cy="190" r="2.1" fill="DET2"/><circle cx="236" cy="190" r="2.1" fill="DET2"/>',
+      back:'<path d="M200 140 C197 180 199 210 200 244" stroke="DET2" stroke-width="1.2" fill="none"/><path d="M197 141 C186 180 166 218 154 250" stroke="DET2" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".5"/><path d="M203 141 C214 180 234 218 246 250" stroke="DET2" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="200" cy="135" r="6.4" fill="DET3" stroke="DET" stroke-width="1.5"/><path d="M170 256 C178 234 222 234 230 256" stroke="DET" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M179 256 C185 240 215 240 221 256" stroke="DET2" stroke-width="1" fill="none"/>',
       anchor:{chest:{x:200,y:204,center:true},back:{x:200,y:198,center:true},sleeve:{x:200,y:204,center:true}}}
   };
 
@@ -142,6 +144,7 @@
     const det3 = light ? 'rgba(16,42,86,.06)' : 'rgba(255,255,255,.12)';
     const edge = light ? 'rgba(16,42,86,.22)' : 'rgba(0,0,0,.26)';
     const uid  = 'g' + Math.random().toString(36).slice(2,8);
+    const body = (it.cap && view === 'back') ? CAP_BACK : it.body;
     const details = (view === 'back' ? it.back : it.front)
       .replace(/DET3/g, det3).replace(/DET2/g, det2).replace(/DET/g, det);
     const print = opts.print === false ? '' : printLayer(it, col, view, opts);
@@ -149,7 +152,8 @@
 
     return '<svg viewBox="0 0 400 470" role="img" aria-label="' + esc(it.name + ' ' + col.name + ' 미리보기') + '">' +
       '<defs>' +
-        '<clipPath id="' + uid + 'clip"><path d="' + it.body + '"/></clipPath>' +
+        '<clipPath id="' + uid + 'clip"><path d="' + body + '"/></clipPath>' +
+        '<clipPath id="' + uid + 'brimclip"><path d="' + CAP_BRIM + '"/></clipPath>' +
         '<linearGradient id="' + uid + 'sh" x1="0" y1="0" x2="1" y2="0">' +
           '<stop offset="0" stop-color="#000" stop-opacity=".15"/>' +
           '<stop offset=".2" stop-color="#000" stop-opacity="0"/>' +
@@ -161,18 +165,34 @@
           '<stop offset=".45" stop-color="#fff" stop-opacity="0"/>' +
           '<stop offset="1" stop-color="#000" stop-opacity=".10"/>' +
         '</linearGradient>' +
+        '<linearGradient id="' + uid + 'brim" x1="0" y1="0.02" x2="0" y2="1">' +
+          '<stop offset="0" stop-color="#fff" stop-opacity=".07"/>' +
+          '<stop offset=".35" stop-color="#fff" stop-opacity="0"/>' +
+          '<stop offset=".72" stop-color="#000" stop-opacity=".02"/>' +
+          '<stop offset="1" stop-color="#000" stop-opacity=".12"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="' + uid + 'bsh" x1="0" y1="0" x2="0" y2="1">' +
+          '<stop offset="0" stop-color="#000" stop-opacity=".24"/>' +
+          '<stop offset="1" stop-color="#000" stop-opacity="0"/>' +
+        '</linearGradient>' +
       '</defs>' +
-      '<ellipse cx="200" cy="424" rx="112" ry="12" fill="#0B1526" opacity=".10"/>' +
-      (it.cap ? '<ellipse cx="200" cy="294" rx="112" ry="14" fill="#0B1526" opacity=".07"/>' : '') +
-      (it.extra ? '<path d="' + it.extra + '" fill="' + col.hex + '" stroke="' + edge + '" stroke-width="1.6" stroke-linejoin="round"/>' : '') +
-      (it.cap ? '<path d="M100 250 C100 268 148 284 200 284 C252 284 300 268 300 250 C300 244 282 240 200 240 C118 240 100 244 100 250 Z" fill="#000" opacity=".18"/>' : '') +
-      '<path d="' + it.body + '" fill="' + col.hex + '" stroke="' + edge + '" stroke-width="1.6" stroke-linejoin="round"/>' +
+      '<ellipse cx="200" cy="' + (it.cap ? 320 : 424) + '" rx="' + (it.cap ? 100 : 112) + '" ry="' + (it.cap ? 13 : 12) + '" fill="#0B1526" opacity=".10"/>' +
+      '<path d="' + body + '" fill="' + col.hex + '" stroke="' + edge + '" stroke-width="1.6" stroke-linejoin="round"/>' +
       '<g clip-path="url(#' + uid + 'clip)">' +
         '<rect x="0" y="0" width="400" height="470" fill="url(#' + uid + 'sh)"/>' +
         '<rect x="0" y="0" width="400" height="470" fill="url(#' + uid + 'sh2)"/>' +
       '</g>' +
+      (it.cap && view !== 'back' ? capBrimSVG(col, edge, det2, uid) : '') +
       details + print + guide +
     '</svg>';
+  }
+
+  function capBrimSVG(col, edge, det2, uid){
+    return '<path d="' + CAP_BRIM + '" fill="' + col.hex + '" stroke="' + edge + '" stroke-width="1.6" stroke-linejoin="round"/>' +
+      '<path d="' + CAP_BRIM + '" fill="url(#' + uid + 'brim)"/>' +
+      '<g clip-path="url(#' + uid + 'brimclip)"><path d="M104 320 C150 306 250 306 296 320" fill="none" stroke="#0B1526" stroke-opacity=".16" stroke-width="7"/></g>' +
+      '<path d="' + CAP_SEAMSHADE + '" fill="url(#' + uid + 'bsh)"/>' +
+      '<path d="M126 306 C158 298 242 298 274 306" fill="none" stroke="' + det2 + '" stroke-width="1" stroke-dasharray="4 3"/>';
   }
 
   function guideLayer(it, view){
@@ -242,7 +262,7 @@
       if (view === 'back' && (pos === 'chest' || pos === 'sleeve')) {
         return '<g opacity=".45"><text x="200" y="240" text-anchor="middle" fill="' + ink2 + '" font-size="10.5" font-family="Pretendard,sans-serif">앞면에서 확인</text></g>';
       }
-      if (it.cap) return logoBlock(200, 204, 1.15);
+      if (it.cap) return logoBlock(200, 198, 1);
       if (view === 'back') return logoBlock(200, 240, 1.95);
       if (pos === 'sleeve') return '<g transform="rotate(-14 66 178)">' + logoBlock(66, 178, .6) + '</g>';
       if (pos === 'back') return '<g opacity=".45"><text x="200" y="250" text-anchor="middle" fill="' + ink2 + '" font-size="10.5" font-family="Pretendard,sans-serif">등판 인쇄 · 뒷면에서 확인</text></g>';
@@ -256,7 +276,7 @@
       return textBlock(it.anchor.back.x, it.anchor.back.y - 16, 27, true);
     }
 
-    if (it.cap) return textBlock(200, 208, 16, true);
+    if (it.cap) return textBlock(200, 205, 16, true);
     if (pos === 'back') return '<g opacity=".45"><text x="200" y="250" text-anchor="middle" fill="' + ink2 + '" font-size="10.5" font-family="Pretendard,sans-serif">등판 인쇄 · 뒷면에서 확인</text></g>';
     if (pos === 'sleeve') return '<g transform="rotate(-14 ' + it.anchor.sleeve.x + ' ' + it.anchor.sleeve.y + ')">' + textBlock(it.anchor.sleeve.x, it.anchor.sleeve.y, 10, true) + '</g>';
     const b = textBlock(it.anchor.chest.x, it.anchor.chest.y, 14.5, false);
@@ -270,7 +290,13 @@
   function iconSVG(k){
     const it = ITEMS[k];
     const base = it.cap
-      ? '<path d="M110 248 C110 266 150 282 200 282 C250 282 290 266 290 248 C290 236 262 230 200 230 C138 230 110 236 110 248 Z" fill="#CFDDF1" stroke="#20406F" stroke-width="9" stroke-linejoin="round"/><path d="M118 248 C116 178 152 134 200 134 C248 134 284 178 282 248 Z" fill="#E2EBF9" stroke="#20406F" stroke-width="9" stroke-linejoin="round"/><circle cx="200" cy="132" r="7" fill="#20406F"/>'
+      ? '<path d="' + CAP + '" fill="#E2EBF9" stroke="#20406F" stroke-width="9" stroke-linejoin="round"/>' +
+        '<path d="' + CAP_BRIM + '" fill="#CFDDF1" stroke="#20406F" stroke-width="9" stroke-linejoin="round"/>' +
+        '<path d="M104 282 C148 263 252 263 296 282" stroke="#20406F" stroke-width="4" fill="none"/>' +
+        '<path d="M200 142 C197 180 199 220 200 256" stroke="#20406F" stroke-width="4" fill="none"/>' +
+        '<path d="M197 143 C186 182 166 220 156 250" stroke="#20406F" stroke-width="4" fill="none" stroke-linecap="round" opacity=".4"/>' +
+        '<path d="M203 143 C214 182 234 220 244 250" stroke="#20406F" stroke-width="4" fill="none" stroke-linecap="round" opacity=".4"/>' +
+        '<circle cx="200" cy="136" r="7" fill="#20406F"/>'
       : '<path d="' + it.body + '" fill="#E2EBF9" stroke="#20406F" stroke-width="9" stroke-linejoin="round"/>';
     const extra = it.cap ? ''
       : (k === 'vest' ? '<path d="M200 58 L200 396" stroke="#20406F" stroke-width="7"/>'
@@ -629,7 +655,7 @@
     window.addEventListener('resize', onScroll);
     setTimeout(onScroll, 60);
 
-    ['#quote','#pricing','#print-guide','#industries','#cases','#ai','#faq'].forEach(function (id) {
+    ['#quote','#pricing','#print-guide','#industries','#cases','#ai'].forEach(function (id) {
       const sec = document.querySelector(id);
       if (!sec) return;
       new IntersectionObserver(function (entries) {
