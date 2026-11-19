@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>티메이트 TeeMate — 단체복·유니폼 1분 간편견적 + AI 무료 시안</title>
+<meta name="description" content="품목·색상·수량·인쇄 위치만 고르면 장당 단가가 바로 나옵니다. 수량 구간별 단가 공개, 총무 결재용 정식 견적서 즉시 발행, 로고가 없어도 AI 무료 시안. 소량 10장부터 · 세금계산서 발행.">
+<meta name="theme-color" content="#102A56">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%231F5AE0'/%3E%3Cpath d='M24 13c-4 0-7 1.4-9 3l-4 3 3 5 4-2v14h12V22l4 2 3-5-4-3c-2-1.6-5-3-9-3z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== 상단 공지 ===== -->
+<div class="promo-bar">
+  <div class="wrap promo-in">
+    <span><b>10장부터 소량 제작</b> — 정식 견적서 즉시 발행</span>
+    <span class="psep"></span>
+    <span class="p3"><b>100장 이상</b> 소형 1도 나염 인쇄비 0원</span>
+    <span class="psep"></span>
+    <span class="p2"><b>20만원 이상</b> 배송비 무료</span>
+    <a class="pmore" href="#pricing">단가표 보기 →</a>
+  </div>
+</div>
+
+<!-- ===== 헤더 ===== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="티메이트 홈">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M24 12c-4.4 0-7.6 1.6-9.8 3.2l-4.4 3.3 3.3 5.4 4.3-2.2V37h13.2V21.7l4.3 2.2 3.3-5.4-4.4-3.3C31.6 13.6 28.4 12 24 12z" fill="#fff"/></svg>
+      </span>
+      <span class="brand-name"><b>티메이트</b><span>TEEMATE</span></span>
+    </a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="#quote">간편견적</a>
+      <a href="#pricing">품목·단가</a>
+      <a href="#print-guide">인쇄가이드</a>
+      <a href="#industries">업종별 추천</a>
+      <a href="#cases">제작사례</a>
+      <a href="#ai">AI 시안</a>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-tel"><span>평일 09–18시</span> 0000-0000</span>
+      <a class="btn btn-primary" href="#quote">1분 견적</a>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <a href="#quote">간편견적</a>
+      <a href="#pricing">품목 · 수량별 단가표</a>
+      <a href="#print-guide">인쇄 방식 가이드</a>
+      <a href="#industries">업종별 추천 구성</a>
+      <a href="#cases">제작사례</a>
+      <a href="#ai">AI 무료 시안</a>
+      <a href="#process">납기 · 제작 프로세스</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <div class="mm-cta">
+        <a class="btn btn-ghost" href="#ai">AI 시안 요청</a>
+        <a class="btn btn-primary" href="#quote">견적 시작</a>
+      </div>
+      <div class="mm-info">평일 09:00–18:00 (점심 12:00–13:00) · 0000-0000<br>본 페이지는 사업 검토용 데모입니다.</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 히어로 ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-left">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>단체복·유니폼 간편견적</span>
+      <h1>복잡한 카톡 견적 끝,<br>1분이면 <span class="hl">단가</span>와 <span class="hl">AI 시안</span>까지</h1>
+      <p class="lead">품목·색상·수량·인쇄 위치만 고르면 <b>장당 단가가 바로</b> 나옵니다.
+        로고가 없어도 <b>업체명과 업종만</b> 적어주시면 AI로 로고·착용 시안을 <b>무료</b>로 잡아드려요.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#quote">1분 간편견적 시작</a>
+        <a class="btn btn-ghost btn-lg" href="#ai">AI 무료 시안 받기</a>
+      </div>
+      <div class="hero-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22A06B" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        회원가입 없이 확인 · 결제 없이 견적만 받아보세요
+      </div>
+      </div>
+      <div class="hero-sub">
+      <ul class="trust">
+        <li><span class="ck">✓</span>소량 10장부터 제작</li>
+        <li><span class="ck">✓</span>정식 견적서 즉시 발행</li>
+        <li><span class="ck">✓</span>세금계산서·현금영수증</li>
+        <li><span class="ck">✓</span>AI 시안 1차 무료</li>
+      </ul>
+      <div class="quick">
+        <span class="ql">업종으로 바로 시작</span>
+        <button type="button" data-preset="factory">공장·건설</button>
+        <button type="button" data-preset="cafe">식당·카페</button>
+        <button type="button" data-preset="school">학원·행사</button>
+        <button type="button" data-preset="team">동호회·팀</button>
+      </div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-art-top">
+        <span class="ha-badge"><i></i>실시간 미리보기</span>
+        <span class="ha-live">LIVE MOCKUP</span>
+      </div>
+      <div id="heroMockup" class="hero-mk"></div>
+      <div class="float-card float-price">
+        <div class="fp-lbl">30장 기준 무지 단가</div>
+        <div class="fp-val" id="heroUnit">7,430원</div>
+        <div class="fp-sub">인쇄 별도 · VAT 별도</div>
+      </div>
+      <div class="float-card float-ship">
+        <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span>
+        <span><b>평균 7영업일 출고</b><span>100장 이하 기준 · 택배 2~3일</span></span>
+      </div>
+      <div class="hero-art-foot">
+        <span class="hf">17수 헤비 · 네이비 · 등판 인쇄</span>
+        <span class="hf"><b>한빛정밀</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 신뢰 스트립 ===== -->
+<div class="strip">
+  <div class="wrap">
+    <ul>
+      <li>
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5M5 8v9l7 4 7-4V8" stroke-linejoin="round"/></svg></span>
+        <span><b>소량 10장부터</b><span>동호회·소규모 매장도 OK</span></span>
+      </li>
+      <li>
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h4" stroke-linecap="round"/></svg></span>
+        <span><b>정식 견적서 즉시 발행</b><span>총무 결재용 PDF·인쇄</span></span>
+      </li>
+      <li>
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z" stroke-linejoin="round"/><path d="M4 9h16M8 13h4M8 16h7" stroke-linecap="round"/></svg></span>
+        <span><b>세금계산서 발행</b><span>현금영수증·카드결제 가능</span></span>
+      </li>
+      <li>
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.7 6.9 18.4l1.2-5.6L4 8.9l5.6-.6z" stroke-linejoin="round"/></svg></span>
+        <span><b>AI 시안 무료</b><span>로고 없어도 업종만 알려주세요</span></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 견적 빌더 ===== -->
+<section class="builder-sec" id="quote">
+  <div class="wrap">
+    <div class="builder-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>STEP 1 – 4</span>
+        <h2>골라만 누르면 견적이 끝납니다</h2>
+        <p>품목 → 색상·수량·인쇄 → 실시간 견적 → AI 시안 요청. 스크롤 한 번에 끝나요.</p>
+      </div>
+      <div class="step-track">
+        <span><b>01</b> 품목</span><span class="sep">›</span>
+        <span><b>02</b> 색상·수량</span><span class="sep">›</span>
+        <span><b>03</b> 인쇄</span><span class="sep">›</span>
+        <span><b>04</b> 견적·시안</span>
+      </div>
+    </div>
+
+    <div class="builder-grid">
+      <!-- 컨트롤 -->
+      <div class="card controls">
+        <div class="step-block" style="margin-top:0;padding-top:0">
+          <div class="sh"><span class="step-num">01</span><h3>품목 선택</h3><span class="mini">8종 · 최소 10장</span></div>
+          <div class="items" id="itemGrid" role="group" aria-label="품목 선택"></div>
+        </div>
+
+        <div class="step-block">
+          <div class="sh"><span class="step-num">02</span><h3>색상 선택</h3><span class="mini" id="colorName">네이비</span></div>
+          <div class="swatches" id="colorRow" role="group" aria-label="색상 선택"></div>
+          <div class="sw-label">
+            <span class="sw-dot" id="colorDot"></span>
+            <span>선택 색상 <b id="colorName2">네이비</b></span>
+            <span class="side">실물과 다를 수 있어요</span>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="sh"><span class="step-num">03</span><h3>수량 선택</h3><span class="mini">사이즈 혼합 가능</span></div>
+          <div class="qty-presets" id="qtyChips" role="group" aria-label="수량 프리셋"></div>
+          <div class="qty-row">
+            <label class="qty-field" for="qtyInput">
+              <input id="qtyInput" type="number" min="10" max="2000" step="10" value="30" inputmode="numeric" aria-label="수량 직접입력">
+              <span>장</span>
+            </label>
+            <input class="range" id="qtyRange" type="range" min="10" max="300" step="5" value="30" aria-label="수량 슬라이더">
+          </div>
+          <div class="qty-hint" id="qtyHint"></div>
+        </div>
+
+        <div class="step-block">
+          <div class="sh"><span class="step-num">04</span><h3>인쇄 위치</h3><span class="mini">1곳부터</span></div>
+          <div class="pos-grid" id="posRow" role="group" aria-label="인쇄 위치"></div>
+        </div>
+
+        <div class="step-block">
+          <div class="sh"><span class="step-num">05</span><h3>인쇄 방식</h3><span class="mini">소재에 맞게 추천</span></div>
+          <div class="methods" id="methodRow" role="group" aria-label="인쇄 방식"></div>
+          <div class="plus-note">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A97AD" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1" stroke-linecap="round"/></svg>
+            로고·사진은 DTF, 작은 글자·고급감은 자수를 권합니다.
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="sh"><span class="step-num">06</span><h3>미리보기 문구</h3><span class="mini">비워도 됩니다</span></div>
+          <div class="text-grid">
+            <div class="field">
+              <label for="companyInput">업체명 / 단체명</label>
+              <input id="companyInput" type="text" maxlength="14" placeholder="예) 한빛정밀" value="한빛정밀" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="sloganInput">문구 <span class="opt">(선택)</span></label>
+              <input id="sloganInput" type="text" maxlength="18" placeholder="예) 안전제일" value="안전제일" autocomplete="off">
+            </div>
+          </div>
+          <div class="plus-note">입력한 문구가 오른쪽 미리보기에 바로 반영됩니다. 실제 시안은 AI가 다듬어 드려요.</div>
+        </div>
+      </div>
+
+      <!-- 미리보기 + 견적 -->
+      <div class="panel-wrap">
+        <div class="card panel">
+          <div class="panel-head">
+            <span class="ph-t"><i></i>실시간 미리보기</span>
+            <div class="ph-right">
+              <button class="guide-btn" id="guideBtn" aria-pressed="false" aria-label="인쇄 영역 보기" title="인쇄 영역 보기">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"/><path d="M8 8h8v8H8z"/></svg>
+              </button>
+              <div class="view-toggle" role="group" aria-label="앞면 뒷면 전환">
+                <button id="viewFront" aria-pressed="true">앞면</button>
+                <button id="viewBack" aria-pressed="false">뒷면</button>
+              </div>
+            </div>
+          </div>
+          <div class="mk-stage" id="mockupStage"></div>
+          <div class="mk-caption">
+            <span><b id="mkItem">라운드티</b> · <span id="mkColor">네이비</span> · <span id="mkSize">M~3XL</span></span>
+            <span id="mkPrint">왼가슴 소형</span>
+          </div>
+          <div class="price-box">
+            <div class="sum-line"><span class="l">무지 단가</span><span class="v" id="pBase">7,900원</span></div>
+            <div class="sum-line disc"><span class="l">수량 할인 <span class="tier-badge" id="pTierName">30장 이상 6%</span></span><span class="v" id="pDisc">-474원</span></div>
+            <div class="sum-line"><span class="l">인쇄비 <span style="color:#9AA6BA;font-size:10px" id="pPrintName">(왼가슴 소형 · 나염)</span></span><span class="v" id="pPrint">+3,000원</span></div>
+            <div class="sum-div"></div>
+            <div class="unit-line"><span class="ul-l">장당 단가</span><span class="ul-v" id="pUnit">10,430원</span></div>
+            <div class="total">
+              <span class="tl">총 예상 금액</span>
+              <span class="tv" id="pTotal">312,900원</span>
+            </div>
+            <div class="vat" id="pVat">VAT 별도 · VAT 포함 344,190원</div>
+          </div>
+          <div class="panel-promo">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6M12 3v12M7 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            100장 이상이면 소형 1도 나염 인쇄비 0원 · 20만원 이상 배송비 무료
+          </div>
+          <div class="panel-actions">
+            <button class="btn btn-primary btn-block" id="toAiBtn">이 구성으로 AI 시안 요청</button>
+            <button class="btn btn-ghost btn-block" id="docBtn">견적서 보기 / PDF</button>
+          </div>
+          <div class="panel-foot">표시 금액은 예상 견적이며, 원단·사이즈 구성과 배송비에 따라 최종 확정됩니다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 모바일 하단 바 -->
+<div class="sticky-buy" id="stickyBuy">
+  <div class="sb-l"><div class="sb-top">장당 <span id="sbUnit">10,430원</span> · <span id="sbQty">30장</span></div><b id="sbTotal">312,900원</b></div>
+  <a class="btn btn-primary" href="#ai">AI 시안 요청</a>
+</div>
+
+<!-- ===== 품목 · 단가표 ===== -->
+<section class="sec pricing-sec" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>품목 · 단가표</span>
+      <h2>수량 구간별 단가, 숨기지 않습니다</h2>
+      <p>아래는 <b>무지(인쇄 제외) 장당 단가</b>입니다. 인쇄비는 위치·방식에 따라 장당으로 더해지고, 수량이 늘면 인쇄비도 함께 내려갑니다.</p>
+    </div>
+
+    <div class="guide-grid" id="guideGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:9px;margin-bottom:16px"></div>
+
+    <div class="tbl-wrap">
+      <div class="tbl-head" style="padding:13px 16px 0">
+        <span class="tt"><i></i>무지 단가표 <span style="font-weight:600;color:#8A97AD;font-size:11.5px">(VAT 별도)</span></span>
+        <span class="hint">칸을 누르면 그 조건으로 바로 견적이 맞춰집니다</span>
+      </div>
+      <div class="tbl-scroll">
+        <table class="pt" id="priceTable" aria-label="품목·수량 구간별 무지 단가"></table>
+      </div>
+      <div class="tbl-foot">
+        <span><b>최소 수량</b> 10장 (10장 미만은 별도 문의)</span>
+        <span><b>사이즈</b> M~3XL 혼합 주문 가능 (모자 FREE)</span>
+        <span><b>배송비</b> 20만원 이상 무료 · 도서산간 추가</span>
+      </div>
+    </div>
+
+    <div class="tbl-head" style="margin:24px 0 12px">
+      <span class="tt"><i style="background:#0E9F6E"></i>인쇄비 (장당 · 나염 기준)</span>
+      <span class="hint">DTF 전사 +1,000원 · 자수 +3,500원</span>
+    </div>
+    <div class="guide-table five" id="printTbl"></div>
+    <div class="tbl-foot" style="border:1px solid var(--line);border-radius:12px;background:#FAFBFE;margin-top:10px">
+      <span>· 인쇄비는 인쇄 면적과 색수에 따라 달라지며, 위 표는 <b>1도(단색)</b> 기준입니다.</span>
+      <span>· 100장 이상 소형 1도 나염은 <b>인쇄비 0원</b> 프로모션 적용.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 인쇄 가이드 ===== -->
+<section class="sec print-sec" id="print-guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>인쇄 가이드</span>
+      <h2>나염이 좋을까, 자수가 좋을까</h2>
+      <p>원단과 디자인에 따라 결과가 완전히 달라집니다. 4가지 방식의 장단점을 그대로 적었습니다.</p>
+    </div>
+
+    <div class="pg-grid">
+      <div class="pg">
+        <div class="ph"><span class="pico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 15h18" stroke-linecap="round"/></svg></span><span class="tag blue">대량 추천</span></div>
+        <h4>나염 (스크린)</h4>
+        <p class="pdesc">색상별 판을 만들어 직접 인쇄하는 전통 방식. 색이 선명하고 세탁에 강합니다.</p>
+        <div class="pros">장점 · 단가 저렴 · 발색 좋음 · 대량에 최적</div>
+        <div class="cons">주의 · 색수만큼 비용 증가 · 그라데이션 약함</div>
+        <div class="rec">추천 <b>로고 1~2색, 50장 이상</b></div>
+      </div>
+      <div class="pg">
+        <div class="ph"><span class="pico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16" stroke-linecap="round"/></svg></span><span class="tag green">소량 추천</span></div>
+        <h4>DTF 전사</h4>
+        <p class="pdesc">필름에 출력해 열로 붙이는 방식. 사진·풀컬러·그라데이션까지 표현됩니다.</p>
+        <div class="pros">장점 · 1장부터 · 풀컬러 · 빠른 제작</div>
+        <div class="cons">주의 · 필름 두께감 · 아주 얇은 선은 뭉개짐</div>
+        <div class="rec">추천 <b>사진·컬러 로고, 10~50장</b></div>
+      </div>
+      <div class="pg">
+        <div class="ph"><span class="pico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 20 4M14 4h6v6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12v8h8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tag">고급</span></div>
+        <h4>자수</h4>
+        <p class="pdesc">실로 직접 수놓는 방식. 로고에 입체감이 생기고 세탁·마찰에 가장 강합니다.</p>
+        <div class="pros">장점 · 고급스러움 · 반영구적 · 현장복에 적합</div>
+        <div class="cons">주의 · 작은 글씨 부적합 · 사진 표현 불가</div>
+        <div class="rec">추천 <b>작업복·점퍼·모자 로고</b></div>
+      </div>
+      <div class="pg">
+        <div class="ph"><span class="pico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg></span><span class="tag amber">안전</span></div>
+        <h4>패치 · 반사</h4>
+        <p class="pdesc">별도 원단에 자수한 와펜을 부착하거나, 빛을 반사하는 필름을 올립니다.</p>
+        <div class="pros">장점 · 탈부착 · 야간 식별 · 두꺼운 원단 대응</div>
+        <div class="cons">주의 · 단가 높음 · 최소 수량 협의</div>
+        <div class="rec">추천 <b>안전조끼·야간 현장·고급 유니폼</b></div>
+      </div>
+    </div>
+
+    <div class="guide-table">
+      <div class="grow head"><div>구분</div><div>나염</div><div>DTF 전사</div><div>자수</div></div>
+      <div class="grow"><div class="k">색수 제한</div><div>1~4도</div><div>제한 없음</div><div>실 색상 기준</div></div>
+      <div class="grow"><div class="k">터치감</div><div>원단과 유사</div><div>약간 두께감</div><div>입체감</div></div>
+      <div class="grow"><div class="k">소량(10장)</div><div>가능</div><div>가장 적합</div><div>가능(로고 단순 시)</div></div>
+      <div class="grow"><div class="k">대량 단가</div><div>가장 저렴</div><div>보통</div><div>높음</div></div>
+    </div>
+
+    <ul class="file-tips">
+      <li><span class="n">1</span><span><b>파일은 AI(일러스트)·PDF가 가장 좋습니다.</b> PNG·JPG는 2,500px 이상, 로고 배경은 투명하게 저장해 주세요.</span></li>
+      <li><span class="n">2</span><span><b>얇은 선은 3mm 이상.</b> 그보다 가는 선은 인쇄·자수에서 뭉개질 수 있습니다. 글씨는 아웃라인 처리해 주세요.</span></li>
+      <li><span class="n">3</span><span><b>어두운 옷에 밝은 인쇄</b>는 색이 살짝 다르게 보일 수 있어, 시안 단계에서 원단 위 색을 확인합니다.</span></li>
+      <li><span class="n">4</span><span><b>로고 파일이 없어도 됩니다.</b> 명함 사진이나 업체명만 있으면 AI가 1차 시안을 만들어 드립니다.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 업종별 추천 ===== -->
+<section class="sec" id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>업종별 추천</span>
+      <h2>우리 업종은 이 조합으로 많이 합니다</h2>
+      <p>업종별로 실제 많이 나가는 구성입니다. 누르면 그 품목·색상·인쇄로 견적이 바로 세팅됩니다.</p>
+    </div>
+    <div class="ind-grid" id="indGrid"></div>
+  </div>
+</section>
+
+<!-- ===== AI 시안 ===== -->
+<section class="sec ai-sec" id="ai">
+  <div class="wrap ai-inner">
+    <div>
+      <span class="eyebrow"><span class="dot" style="background:#8FB4FF"></span>AI 무료 시안</span>
+      <h2>로고가 없어도 OK,<br>업체명과 업종만 적어주세요</h2>
+      <p class="lead">AI로 로고와 착용 시안을 <em>무료로 1차</em> 잡아드립니다.
+        마음에 드는 방향을 골라주시면 담당자가 인쇄용 파일로 다듬어 드려요.</p>
+      <ul class="ai-list">
+        <li><span class="n">1</span>업체명·업종·원하는 분위기만 적으면 1차 시안 2~3종</li>
+        <li><span class="n">2</span>고른 품목·색상에 실제로 입힌 착용 이미지로 확인</li>
+        <li><span class="n">3</span>수정 2회까지 무료, 인쇄용 원본 파일 제공</li>
+      </ul>
+      <div class="ba-flow">로고 없음 <span class="ba-arrow">→</span> AI 시안 3종 <span class="ba-arrow">→</span> 인쇄용 파일</div>
+      <div class="ba" id="aiSamples"></div>
+    </div>
+
+    <div class="form-card">
+      <h3>AI 시안 요청서</h3>
+      <p class="fc-sub">지금 고른 구성이 자동으로 담깁니다. 담당자가 영업일 1일 내 연락드려요.</p>
+      <form id="aiForm" novalidate>
+        <div class="form-grid">
+          <div class="form-grid two" style="gap:10px">
+            <div class="field" id="fName">
+              <label for="fCompany">업체명 / 단체명 <span class="req">*</span></label>
+              <input id="fCompany" name="company" type="text" placeholder="예) 한빛정밀" required autocomplete="organization">
+              <span class="err">업체명을 입력해 주세요.</span>
+            </div>
+            <div class="field" id="fContact">
+              <label for="fPhone">연락처 <span class="req">*</span></label>
+              <input id="fPhone" name="phone" type="tel" placeholder="010-0000-0000" required inputmode="tel" autocomplete="tel">
+              <span class="err">연락 가능한 번호를 정확히 입력해 주세요.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fBusiness">업종 / 업태</label>
+            <input id="fBusiness" name="business" type="text" placeholder="예) 정밀가공 · 공장 (시화공단)" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="fMsg">원하는 로고·문구 느낌</label>
+            <textarea id="fMsg" name="message" placeholder="예) 로고가 없어서 '한빛정밀' 글자로 각지고 신뢰감 있게, 안전 느낌으로 잡아주세요."></textarea>
+          </div>
+          <div class="field">
+            <label>로고 파일 <span class="opt">(선택 · ai/png/pdf)</span></label>
+            <label class="upload" for="fFile">
+              <span class="ui"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0L7 9m5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" stroke-linecap="round"/></svg></span>
+              <span class="ut" id="fileName"><b>파일 선택</b>없으면 AI가 새로 잡아드려요</span>
+              <input id="fFile" type="file" accept=".ai,.pdf,.png,.jpg,.jpeg,.svg">
+            </label>
+          </div>
+          <label class="agree">
+            <input id="fAgree" type="checkbox">
+            <span>시안 제작 및 상담을 위한 <u>개인정보 수집·이용</u>에 동의합니다. (이름·연락처, 보관 3개월)</span>
+          </label>
+          <div class="field" id="fAgreeErr" style="display:none"><span class="err" style="display:block">개인정보 수집·이용에 동의해 주세요.</span></div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit" style="margin-top:2px">무료 시안 요청하기</button>
+          <div class="form-note">데모 페이지입니다 · 실제로 전송되거나 저장되지 않습니다</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 제작사례 ===== -->
+<section class="sec" id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>제작사례</span>
+      <h2>이런 구성으로 많이들 맞깁니다</h2>
+      <p>업종별로 자주 나가는 조합입니다. 같은 품목·색상으로 우리 회사 문구만 바꿔서 바로 견적을 확인해 보세요.</p>
+    </div>
+    <div class="cases" id="caseGrid"></div>
+    <div style="text-align:center;margin-top:22px">
+      <a class="btn btn-ghost" href="#quote">내 업종으로 견적 내보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 프로세스 + 납기 ===== -->
+<section class="sec" id="process" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>제작 프로세스 · 납기</span>
+      <h2>주문부터 출고까지, 일정까지 계산해 드립니다</h2>
+      <p>결제 전까지 확정되는 것은 없습니다. 시안과 사이즈표를 먼저 확인하세요.</p>
+    </div>
+    <div class="proc-wrap">
+      <div class="process">
+        <div class="pcard"><span class="pn">STEP 01</span><h4>간편견적 확인</h4><p>품목·수량·인쇄 위치만 골라 장당 단가와 총액을 바로 확인합니다.</p></div>
+        <div class="pcard"><span class="pn">STEP 02</span><h4>AI 시안 · 사이즈표</h4><p>업체명과 업종을 적어주시면 로고·착용 시안을 무료로 잡아드립니다.</p><span class="pd">1~2일</span></div>
+        <div class="pcard"><span class="pn">STEP 03</span><h4>시안 확정 · 결제</h4><p>인쇄 위치·색상을 최종 확인하고 세금계산서와 함께 결제합니다.</p></div>
+        <div class="pcard"><span class="pn">STEP 04</span><h4>제작 · 출고</h4><p>평균 7영업일 내 제작 후 전국 배송. 급행은 별도 문의.</p><span class="pd">약 7일</span></div>
+      </div>
+
+      <div class="due-card">
+        <div class="due-head"><b>납기 역산 계산기</b><span>행사일만 넣어보세요</span></div>
+        <div class="due-body">
+          <div class="field">
+            <label for="dueDate">행사 · 납품 희망일</label>
+            <input id="dueDate" type="date">
+          </div>
+          <div class="due-res" id="dueRes"></div>
+          <div class="due-note" id="dueNote"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 후기 ===== -->
+<section class="sec rev-sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:20px">
+      <span class="eyebrow"><span class="dot"></span>고객 후기</span>
+      <h2 style="font-size:clamp(20px,2.8vw,26px)">총무님이 먼저 찾는 이유</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>“3개 업체 견적서를 하루 만에 다 받았어요. 결재 올릴 때 금액 산출 근거가 표로 나와서 설명할 게 없었습니다.”</p>
+        <div class="who"><b>시화공단 · 제조업 총무</b><span>작업조끼 120장</span></div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>“로고 파일이 없어서 걱정했는데 업종만 알려주니 시안 3개를 바로 보내주더라고요. 그중 하나 그대로 갔습니다.”</p>
+        <div class="who"><b>카페 · 매장 운영</b><span>카라티 30장</span></div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★☆</div>
+        <p>“행사가 급해서 납기 계산기로 역산해 봤는데, 늦으면 급행으로 안내해 줘서 일정에 맞춰 받았어요.”</p>
+        <div class="who"><b>학원 · 행사 담당</b><span>단체티 50장</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:12px"><span class="tag">데모 예시 후기입니다</span></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>자주 묻는 질문</span>
+      <h2>총무님이 가장 많이 물어보시는 것</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>정말 10장만 주문해도 되나요?</summary>
+        <p>네, 기본 10장부터 가능합니다. 10장 미만은 소량 추가비가 붙어서 별도 문의로 안내드립니다. 수량이 30·50·100·200·500장을 넘길 때마다 장당 단가가 한 단계씩 내려가고, <b>인쇄비도 함께 내려갑니다.</b></p>
+      </details>
+      <details>
+        <summary>견적서를 결재용으로 낼 수 있나요?</summary>
+        <p>가능합니다. 견적 화면의 <b>‘견적서 보기 / PDF’</b>를 누르면 사업자 정보와 고른 품목·색상·수량·인쇄·단가·VAT가 그대로 담긴 정식 견적서가 나오고, 인쇄 또는 PDF 저장으로 사내 결재에 바로 올릴 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>로고 파일이 없는데 괜찮을까요?</summary>
+        <p>괜찮습니다. 업체명과 업종만 알려주시면 AI로 로고 시안과 착용 이미지를 1차 무료로 잡아드립니다. 명함 사진이나 손글씨 로고라도 보내주시면 방향을 잡을 수 있습니다. 수정은 2회까지 무료입니다.</p>
+      </details>
+      <details>
+        <summary>인쇄 방식은 무엇을 골라야 하나요?</summary>
+        <p>로고가 1~2색이고 수량이 많으면 <b>나염</b>, 사진이나 그라데이션이 있으면 <b>DTF 전사</b>, 작업복·점퍼·모자처럼 오래 입는 옷은 <b>자수</b>를 권합니다. 헷갈리시면 시안 단계에서 담당자가 더 나은 방향으로 한 번 더 제안드립니다.</p>
+      </details>
+      <details>
+        <summary>납기와 배송은 어떻게 되나요?</summary>
+        <p>시안 확정과 결제 후 평균 <b>7영업일</b> 내 출고되고, 택배는 출고 후 2~3일 걸립니다. 100장 이하 기준이며 수량이 많으면 하루 이틀 더 걸릴 수 있어요. 행사 일정이 있으시면 <b>최소 2주 전</b>에 주문하시는 것을 권합니다. 급행은 별도 문의 부탁드립니다.</p>
+      </details>
+      <details>
+        <summary>사이즈를 섞어서 주문할 수 있나요?</summary>
+        <p>가능합니다. M~3XL을 인원별로 섞어 주문하실 수 있고, 사이즈표를 먼저 보내드린 뒤 명단을 받습니다. 모자는 FREE 사이즈이며, 4XL 이상은 별도 문의입니다.</p>
+      </details>
+      <details>
+        <summary>세금계산서 발행과 결제 수단은요?</summary>
+        <p>세금계산서 발행, 카드 결제, 계좌이체 모두 가능하고 현금영수증도 발행됩니다. VAT는 별도이며 견적 화면에 포함 금액을 함께 표시합니다. 20만원 이상이면 배송비가 무료입니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="wrap cta-in">
+    <div>
+      <h2>올해 단체복, 견적부터 받아보세요</h2>
+      <p>30초면 장당 단가가 나옵니다. 로고 없어도 AI 시안까지 무료.</p>
+    </div>
+    <div class="btns">
+      <a class="btn btn-ghost btn-lg" href="#pricing">단가표 보기</a>
+      <a class="btn btn-primary btn-lg" href="#quote">1분 간편견적</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 12c-4.4 0-7.6 1.6-9.8 3.2l-4.4 3.3 3.3 5.4 4.3-2.2V37h13.2V21.7l4.3 2.2 3.3-5.4-4.4-3.3C31.6 13.6 28.4 12 24 12z" fill="#fff"/></svg>
+        </span>
+        <span class="brand-name"><b>티메이트</b><span>TEEMATE</span></span>
+      </a>
+      <div class="foot-links">
+        <a href="#quote">간편견적</a><a href="#pricing">품목·단가</a><a href="#print-guide">인쇄가이드</a><a href="#industries">업종별</a><a href="#cases">제작사례</a><a href="#ai">AI 시안</a><a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-info">
+      <div><b>티메이트</b> · 대표 홍길동 · 사업자등록번호 000-00-00000 · 통신판매업 신고 제2026-경기시흥-0000호</div>
+      <div>경기 시흥시 공단로 000, 3층 · 대표전화 0000-0000 · 평일 09:00–18:00 (점심 12:00–13:00)</div>
+      <div>© 2026 TeeMate. All rights reserved.</div>
+      <div class="demo-note">본 페이지는 사업 검토용 시안(프로토타입)입니다. 표시된 견적·사례·후기·사업자 정보는 예시이며, 실제 주문·결제·발송은 이루어지지 않습니다.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 모달 : 접수 완료 ===== -->
+<div class="modal" id="doneModal" role="dialog" aria-modal="true" aria-labelledby="doneTitle">
+  <div class="modal-card">
+    <button class="modal-x btn btn-ghost" data-close="doneModal">닫기</button>
+    <div class="success-ic">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h3 class="h" id="doneTitle">시안 요청이 접수되었습니다</h3>
+    <p class="sub">담당자가 영업일 1일 내 연락드려 1차 시안을 보내드립니다.</p>
+    <span class="demo-chip">데모 · 실제 전송되지 않음</span>
+    <div class="receipt" id="doneReceipt"></div>
+    <div class="modal-foot">
+      <button class="btn btn-primary btn-block" data-close="doneModal">확인</button>
+      <div class="row">
+        <button class="btn btn-ghost" data-close="doneModal">닫기</button>
+        <button class="btn btn-ghost" id="doneDocBtn" data-close="doneModal">견적서 보기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 모달 : 견적서 (인쇄/PDF) ===== -->
+<div class="modal" id="printModal" role="dialog" aria-modal="true" aria-labelledby="docTitle">
+  <div class="modal-card wide">
+    <button class="modal-x btn btn-ghost" data-close="printModal">닫기</button>
+    <div class="doc" id="printRoot">
+      <h3 class="sr" id="docTitle">견적서</h3>
+      <div id="docBody"></div>
+    </div>
+    <div class="modal-foot">
+      <div class="row">
+        <button class="btn btn-ghost" id="printBtn">인쇄 / PDF 저장</button>
+        <button class="btn btn-primary" data-close="printModal">닫기</button>
+      </div>
+      <div class="form-note">데모 · 실제 발행 문서가 아닙니다</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
