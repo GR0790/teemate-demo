@@ -14,7 +14,8 @@
   var f = document.getElementById('f');
   f.style.width = w + 'px';
   f.style.height = h + 'px';
-  f.src = p.get('p') || './index.html';
+  var q = p.get('q') || ('cb=' + Date.now());
+  f.src = (p.get('p') || './index.html') + '?' + q;
   f.addEventListener('load', function () {
     if (!full) return;
     try {
