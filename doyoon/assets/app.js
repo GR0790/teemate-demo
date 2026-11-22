@@ -159,22 +159,22 @@
 
   /* ---------------- field config ---------------- */
   const VEHICLE = [
-    { k: 'mgr', label: '배차담당', ph: '예) 김도윤', m: 'half' },
-    { k: 'mgr2', label: '반차담당', ph: '예) 김도윤', m: 'half' },
-    { k: 'accidentRate', label: '사고율', ph: '예) 0%', m: 'half' },
-    { k: 'accidentMgr', label: '담당', ph: '예) 김도윤', m: 'half' },
-    { k: 'car', label: '차명', ph: '예) 쏘나타 DN8', m: 'half' },
-    { k: 'carNo', label: '차량번호', ph: '예) 12가 3456', m: 'half' },
+    { k: 'mgr', label: '배차담당', ph: '예) 김도윤', m: 'half', hm: 1 },
+    { k: 'mgr2', label: '반차담당', ph: '예) 김도윤', m: 'half', hm: 1 },
+    { k: 'accidentRate', label: '사고율', ph: '예) 0%', m: 'half', hm: 1 },
+    { k: 'accidentMgr', label: '담당', ph: '예) 김도윤', m: 'half', hm: 1 },
+    { k: 'car', label: '차명', ph: '예) 쏘나타 DN8', m: 'half', hm: 1 },
+    { k: 'carNo', label: '차량번호', ph: '예) 12가 3456', m: 'half', hm: 1 },
     { k: 'outAt', label: '배차일시', type: 'datetime' , m: 'half'},
     { k: 'inAt', label: '반차일시', type: 'datetime' , m: 'half'},
     { k: 'inDoneAt', label: '반차완료일시', type: 'datetime' , m: 'half'},
     { k: 'fee', label: '총사용요금', type: 'money', ph: '0', suffix: '원' , m: 'half'},
-    { k: 'kmNow', label: '현재KM', type: 'num', ph: '예) 45,120', suffix: 'km', m: 'half' },
-    { k: 'kmIn', label: '반차KM', type: 'num', ph: '반차 시 입력', suffix: 'km', m: 'half' },
+    { k: 'kmNow', label: '현재KM', type: 'num', ph: '예) 45,120', suffix: 'km', m: 'half', hm: 1 },
+    { k: 'kmIn', label: '반차KM', type: 'num', ph: '반차 시 입력', suffix: 'km', m: 'half', hm: 1 },
     { k: 'fuel', label: '연료', type: 'radio', opts: [['LPG', 'LPG'], ['경유', '경유'], ['휘발유', '휘발유']] },
     { k: 'tank', label: '배차 시 연료량', type: 'radio', opts: [['E', 'E'], ['1/4', '1/4'], ['2/4', '2/4'], ['3/4', '3/4'], ['F', 'F']], help: '배차 시 연료 게이지 위치를 선택해 주세요.' },
-    { k: 'carIns', label: '자차보험 추가가입', type: 'radio', opts: [['가입', '가입'], ['미가입', '미가입']], m: 'half' },
-    { k: 'deductible', label: '자차면책금', type: 'money', suffix: '원', ph: '예) 500,000', m: 'half' },
+    { k: 'carIns', label: '자차보험 추가가입', type: 'radio', opts: [['가입', '가입'], ['미가입', '미가입']], m: 'half', hm: 1 },
+    { k: 'deductible', label: '자차면책금', type: 'money', suffix: '원', ph: '예) 500,000', m: 'half', hm: 1 },
     { k: 'insurer', label: '보험사', ph: '예) 삼성화재', m: 'half' },
     { k: 'claimNo', label: '접수번호', ph: '예) 2026-1234567', m: 'half' },
     { k: 'insMgr', label: '보험담당', ph: '예) 박사고', m: 'half' },
@@ -293,7 +293,7 @@
   function fieldHTML(f, lockedClass) {
     const v = state.fields[f.k] == null ? '' : state.fields[f.k];
     const id = 'f_' + f.k;
-    const cls = 'field' + (f.m === 'half' ? ' half' : '');
+    const cls = 'field' + (f.m === 'half' ? ' half' : '') + (f.hm ? ' hm' : '');
     let control = '';
 
     if (f.type === 'radio') {

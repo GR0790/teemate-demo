@@ -142,7 +142,7 @@ button{font-family:inherit}
   scroll-margin-top:16px;
 }
 .card-head{
-  display:flex;align-items:flex-start;gap:12px;
+  display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;
   padding:20px clamp(16px,3vw,26px) 14px;
   border-bottom:1px solid var(--line);
   background:linear-gradient(180deg,#fbfdff,#fff);
@@ -154,7 +154,7 @@ button{font-family:inherit}
   font-variant-numeric:tabular-nums;
   box-shadow:0 8px 16px -10px rgba(12,37,69,.9);
 }
-.ch-text{flex:1 1 auto;min-width:0}
+.ch-text{flex:1 1 170px;min-width:150px}
 .ch-text h2{font-size:17.5px;letter-spacing:-.02em;font-weight:800}
 .ch-text p{font-size:13px;color:var(--muted);margin-top:3px}
 .chip{
@@ -681,6 +681,8 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
   .card-body{padding:16px}
   .grid{gap:12px}
   .field.span-6,.field.span-4,.field.span-8{grid-column:span 12}
+  .field.half{grid-column:span 12}
+  .field.half.hm{grid-column:span 6}
   .dmg-grid{gap:8px}
   .checks{grid-template-columns:1fr}
   .sign-grid{grid-template-columns:1fr}

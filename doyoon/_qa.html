@@ -10,9 +10,17 @@
   var p = new URLSearchParams(location.search);
   var w = parseInt(p.get('w') || '390', 10);
   var h = parseInt(p.get('h') || '844', 10);
+  var full = p.get('full') === '1';
   var f = document.getElementById('f');
   f.style.width = w + 'px';
   f.style.height = h + 'px';
   f.src = p.get('p') || './index.html';
+  f.addEventListener('load', function () {
+    if (!full) return;
+    try {
+      var d = f.contentDocument;
+      f.style.height = Math.max(h, d.documentElement.scrollHeight) + 'px';
+    } catch (e) {}
+  });
 </script>
 </body></html>
