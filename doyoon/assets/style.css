@@ -677,7 +677,10 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 }
 @media (max-width:719px){
   body{font-size:15.5px;padding-bottom:104px}
-  .card-head{padding:16px 16px 12px}
+  .card-head{padding:16px 16px 12px;display:grid;grid-template-columns:30px 1fr;gap:2px 12px;align-items:start}
+  .card-head .step{grid-column:1;grid-row:1}
+  .card-head .ch-text{grid-column:2;grid-row:1;min-width:0}
+  .card-head .chip{grid-column:2;grid-row:2;justify-self:start;margin-top:6px}
   .card-body{padding:16px}
   .grid{gap:12px}
   .field.span-6,.field.span-4,.field.span-8{grid-column:span 12}
