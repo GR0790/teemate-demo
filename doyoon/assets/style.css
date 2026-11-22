@@ -577,7 +577,7 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 .pt .v{min-height:16px}
 .pt .val{font-weight:600;color:#0f172a}
 .pt .sub{color:#6b7a90;font-weight:400}
-.pt .col-k{width:74px}
+.pt .col-k{width:86px}
 .pt .col-n{width:22%}
 
 .p-note{font-size:9.4px;color:#5a6a82;margin-top:4px;line-height:1.5}
@@ -610,19 +610,19 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 /* 각서 */
 .p-terms{margin-top:10px;break-inside:avoid;page-break-inside:avoid}
 .p-terms h2{
-  text-align:center;font-size:15px;letter-spacing:.06em;font-weight:800;color:#0c2545;
-  margin:6px 0 8px;
+  text-align:center;font-size:14px;letter-spacing:.06em;font-weight:800;color:#0c2545;
+  margin:4px 0 6px;
 }
-.p-terms ol{display:grid;gap:4px;padding-left:0}
+.p-terms ol{display:grid;gap:2.5px;padding-left:0}
 .p-terms li{
-  position:relative;padding-left:13px;font-size:10.4px;line-height:1.55;color:#1b2637;
+  position:relative;padding-left:13px;font-size:10px;line-height:1.5;color:#1b2637;
 }
 .p-terms li::before{content:"·";position:absolute;left:2px;top:0;font-weight:800}
 .p-terms li b{font-weight:700}
-.p-alerts{display:grid;gap:5px;margin:7px 0}
+.p-alerts{display:grid;gap:4px;margin:6px 0}
 .p-alert{
   border:1px solid #b4232c;border-radius:2px;padding:4px 8px;
-  font-size:10px;font-weight:700;color:#8e1d24;background:#fff;
+  font-size:9.6px;font-weight:700;color:#8e1d24;background:#fff;
   display:flex;gap:8px;
 }
 .p-alert.two{display:grid;grid-template-columns:1fr 1fr;gap:8px;border:0;padding:0;background:none}
@@ -636,11 +636,11 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 
 .p-privacy{margin-top:8px;border-top:1px dashed #b9c4d3;padding-top:6px}
 .p-privacy h4{font-size:10.4px;font-weight:800;color:#0c2545;margin-bottom:3px}
-.p-privacy p{font-size:9.6px;color:#3c4a62;line-height:1.5}
+.p-privacy p{font-size:9.2px;color:#3c4a62;line-height:1.45}
 .p-privacy p + p{margin-top:2px}
 
 .p-signrow{
-  margin-top:10px;display:flex;align-items:flex-end;justify-content:space-around;gap:14px;
+  margin-top:8px;display:flex;align-items:flex-end;justify-content:space-around;gap:14px;
   padding:6px 4px 2px;
 }
 .p-signrow .lbl{font-size:10.4px;color:#22314a}
@@ -649,17 +649,17 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 .p-sigempty{display:inline-block;width:96px;border-bottom:1px solid #8b98ab;height:30px;vertical-align:middle;margin:0 4px}
 
 .p-license{
-  margin-top:8px;border:1px solid #3d4a5e;border-radius:2px;padding:6px;
+  margin-top:7px;border:1px solid #3d4a5e;border-radius:2px;padding:5px;
   display:flex;gap:12px;align-items:center;break-inside:avoid;
 }
 .p-license .cap{font-size:9.6px;font-weight:700;color:#22314a;width:76px;flex:0 0 auto;text-align:center}
-.p-license img{max-height:118px;max-width:240px;border:1px solid #dbe3ee;object-fit:contain}
+.p-license img{max-height:96px;max-width:230px;border:1px solid #dbe3ee;object-fit:contain}
 .p-license .empty{
   flex:1;height:74px;border:1px dashed #b9c4d3;display:grid;place-items:center;
   font-size:9.4px;color:#98a4b6;
 }
 .p-foot{
-  margin-top:12px;padding-top:7px;border-top:1px solid #dbe3ee;
+  margin-top:8px;padding-top:6px;break-inside:avoid;border-top:1px solid #dbe3ee;
   display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   font-size:9px;color:#8592a6;
 }
