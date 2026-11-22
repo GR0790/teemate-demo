@@ -370,21 +370,21 @@
       title: '대여차량 손해에 관한 각서',
       desc: '아래 약관을 확인하고 개인정보 수집·이용에 동의해 주세요.',
       tag: '',
-      body: `<div class="terms-list" data-terms>
+      body: `<ol class="terms-list" data-terms>
         <li>운전자격은 승용, 승합 <span class="inline-age">(만 <input type="text" inputmode="numeric" maxlength="2" data-k="minAge" value="${esc(state.fields.minAge || '')}" aria-label="운전 가능 최소 연령">세)</span> 이상 운전 가능함. <b>(임차인 및 제2운전자 외 제3자가 운전한 경우 보험혜택을 받지 못함)</b></li>
         <li>본 차량은 책임·종합보험에 가입되어 있으며 <b>(대인 : 무한 / 대물 : 억원 / 자손 : 삼천만원)</b>, 자차보험은 <b id="insStateText">${state.fields.carIns ? '(' + esc(state.fields.carIns) + ')' : '( 가입 · 미가입 )'}</b> 상태입니다.</li>
         <li>차량사고 발생 시 <b>차량감가비 30%, 휴차 보상 대여료 80%</b>는 임차인 부담입니다.</li>
-      </div>
+      </ol>
       <div class="alert-boxes">
         <div class="alert-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><span>대인·대물·자손으로 보험 처리 시 <b>면책금 50만원</b> 임차인 부담</span></div>
         <div class="alert-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><span>흡연·반려동물로 인한 오염 시 <b>특수크리닉 30만원</b> 임차인 부담</span></div>
       </div>
-      <div class="terms-list" data-terms style="margin-top:2px">
+      <ol class="terms-list" data-terms start="4" style="margin-top:2px;counter-reset:t 3">
         <li>계약기간 이전 연장운행 시 당사의 허락을 득하여야 하며, 통보 없이 24시간 이상 초과 운행 시에는 불법사용으로 간주되어 도난신고 및 직접 조치를 취하여도 이의를 제기할 수 없으며 보험 혜택도 받지 못합니다. <b>(연장 시 시간당 10% 가산금 추가)</b></li>
         <li>본 차량은 위치추적장치가 장착되어 있으며 <b>위치정보 수집에 동의</b>합니다.</li>
         <li>임차인 및 제2운전자는 계약서상 기재된 약관을 숙지하며, 주차위반·교통법규위반 등에 대하여 임차인이 책임질 것을 서약합니다. 자동차 대여 표준약관에 명시된 사항을 이행치 않았을 때는 민·형사상 책임도 감수하며 이의를 제기하지 않겠습니다.</li>
         <li>임차인(운전자)은 임차기간 동안 본 계약서의 내용이 사실과 다름이 없음을 확인하며, 보험사에 대한 대차료(렌트비용) 청구권을 <b>도윤렌트카에 위임</b>합니다.</li>
-      </div>
+      </ol>
       <div class="items-box">
         <h4>지급품목 <span>받은 품목을 체크해 주세요 (선택)</span></h4>
         <div class="checks">
@@ -486,7 +486,7 @@
         el.style.left = (d.x * 100) + '%';
         el.style.top = (d.y * 100) + '%';
         el.innerHTML = X_SVG;
-        el.title = '탭하면 삭제';
+        el.setAttribute('aria-label', '손상 표시 삭제');
         el.addEventListener('click', (ev) => {
           ev.stopPropagation();
           state.damage = state.damage.filter((x) => x !== d);
@@ -621,8 +621,14 @@
     resize();
 
     return {
-      clear() { strokes.length = 0; drawing = false; cur = null; draw(); update(); },
-      has() { return strokes.length > 0; }
+      clear() { strokes.length = 0; drawing = false; cur = null; box.classList.remove('has'); draw(); update(); },
+      has() { return strokes.length > 0; },
+      load(list) {
+        strokes.length = 0;
+        (list || []).forEach((st) => strokes.push(st.map((p) => ({ x: p[0], y: p[1] }))));
+        if (strokes.length) box.classList.add('has');
+        draw(); update();
+      }
     };
   }
 
@@ -632,6 +638,90 @@
       pads[key] = createPad(c, key);
       if (state.sig[key]) $('#sigState-' + key).classList.add('on'), $('#sigState-' + key).textContent = '서명 완료';
     });
+  }
+
+
+  /* ---------------- sample (시안 예시) ---------------- */
+  const SAMPLE_SIG = [
+    [[0.10,0.66],[0.13,0.46],[0.18,0.33],[0.24,0.31],[0.26,0.44],[0.23,0.58],[0.18,0.69],[0.16,0.72]],
+    [[0.29,0.62],[0.32,0.42],[0.36,0.33],[0.41,0.36],[0.42,0.52],[0.38,0.66],[0.37,0.71],[0.43,0.73],[0.50,0.65],[0.57,0.45],[0.63,0.34],[0.67,0.40],[0.65,0.58],[0.58,0.70],[0.52,0.68]],
+    [[0.72,0.36],[0.75,0.52],[0.78,0.66],[0.83,0.71],[0.89,0.62],[0.91,0.52]],
+    [[0.18,0.84],[0.34,0.79],[0.52,0.82],[0.70,0.81],[0.88,0.74]]
+  ];
+  const SAMPLE = {
+    mgr: '김도윤', mgr2: '김도윤', accidentRate: '0%', accidentMgr: '김도윤',
+    car: '쏘나타 DN8', carNo: '12가 3456',
+    outAt: '2026-11-22T10:00', inAt: '2026-11-24T10:00', inDoneAt: '2026-11-24T10:20',
+    fee: '350000', kmNow: '45120', kmIn: '45380',
+    fuel: '휘발유', tank: '3/4', carIns: '가입', deductible: '500000',
+    insurer: '삼성화재', claimNo: '2026-1234567', insMgr: '박사고', fax: '02-467-2121',
+    otherCarNo: '34나 5678', otherCarType: '아반떼', shop: '도윤공업사',
+    note: '대인·대물·자손 보험 처리 시 면책금 50만원 / 단독사고 100만원',
+    minAge: '26', name: '홍길동', phone: '010-1234-5678', rrn: '900101-1234567',
+    licNo: '11-22-345678-90', licType: '1종', addr: '서울특별시 광진구 아차산로 123, 101동 1001호',
+    signName: '홍길동'
+  };
+
+
+  function makeSampleLicense() {
+    const W = 900, H = 570;
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const x = c.getContext('2d');
+    x.fillStyle = '#eef2f7'; x.fillRect(0, 0, W, H);
+    x.fillStyle = '#ffffff'; x.fillRect(18, 18, W - 36, H - 36);
+    x.strokeStyle = '#cbd6e4'; x.lineWidth = 3; x.strokeRect(18, 18, W - 36, H - 36);
+    x.fillStyle = '#1b4a86'; x.fillRect(18, 18, W - 36, 74);
+    x.fillStyle = '#ffffff'; x.font = '700 30px "Malgun Gothic", sans-serif';
+    x.fillText('운전면허증', 48, 66);
+    x.font = '600 18px "Malgun Gothic", sans-serif';
+    x.fillStyle = '#cfe0f7';
+    x.fillText('DRIVER\u2019S LICENSE  ·  SAMPLE', 560, 64);
+    x.fillStyle = '#dbe4ef'; x.fillRect(52, 120, 230, 300);
+    x.strokeStyle = '#b9c7d8'; x.lineWidth = 2; x.strokeRect(52, 120, 230, 300);
+    x.fillStyle = '#a9b8c9'; x.beginPath(); x.arc(167, 225, 46, 0, Math.PI * 2); x.fill();
+    x.fillRect(107, 292, 120, 90);
+    x.fillStyle = '#33415a'; x.font = '600 22px "Malgun Gothic", sans-serif';
+    const rows = [['면허번호', '11-22-345678-90'], ['성명', '홍길동'], ['생년월일', '1990.01.01'], ['주소', '서울특별시 광진구 아차산로 123'], ['면허 종류', '1종 보통']];
+    rows.forEach((r, i) => {
+      x.fillStyle = '#8592a6'; x.font = '600 18px "Malgun Gothic", sans-serif';
+      x.fillText(r[0], 322, 160 + i * 62);
+      x.fillStyle = '#12203a'; x.font = '700 24px "Malgun Gothic", sans-serif';
+      x.fillText(r[1], 460, 162 + i * 62);
+    });
+    x.fillStyle = '#98a4b6'; x.font = '500 15px "Malgun Gothic", sans-serif';
+    x.fillText('※ 시안용 예시 이미지입니다.', 52, 500);
+    return c.toDataURL('image/jpeg', 0.9);
+  }
+
+  function renderAll() {
+    buildForm();
+    applyLock();
+    bindDamage();
+    renderDamages();
+    initPads();
+    refreshProgress();
+  }
+
+  function fillDemo() {
+    Object.keys(SAMPLE).forEach((k) => { state.fields[k] = SAMPLE[k]; });
+    state.fields.signDate = todayISO();
+    state.items = ['nav', 'charger'];
+    state.consent = true;
+    if (!state.damage.length) {
+      state.damage = [
+        { v: 'front', x: 0.3, y: 0.58 },
+        { v: 'driver', x: 0.72, y: 0.52 },
+        { v: 'passenger', x: 0.34, y: 0.6 }
+      ];
+    }
+    state.photo = makeSampleLicense();
+    renderAll();
+    if (pads.renter) pads.renter.load(SAMPLE_SIG);
+    $('#adminPanel').hidden = !state.admin;
+    if (state.admin) refreshAdminLink();
+    refreshProgress();
+    toast('시안 예시 데이터로 채웠습니다. 계약서 확인을 눌러 보세요.');
   }
 
   /* ---------------- lock (customer mode) ---------------- */
@@ -1039,6 +1129,7 @@
     $('#fileCamera').addEventListener('change', (e) => handlePhoto(e.target.files[0]));
     $('#fileGallery').addEventListener('change', (e) => handlePhoto(e.target.files[0]));
 
+    $('#btnDemo').addEventListener('click', fillDemo);
     $('#btnPreview').addEventListener('click', openPreview);
     $('#btnBack').addEventListener('click', closePreview);
     $('#btnPrint').addEventListener('click', () => window.print());
