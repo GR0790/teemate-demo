@@ -438,7 +438,12 @@
       title: '연대보증인 및 제2운전자',
       desc: '해당되는 경우에만 펼쳐서 작성해 주세요. 없으면 비워 두셔도 됩니다.',
       tag: '<span class="chip gray">선택</span>',
-      body: `<div class="grid">${GUARANTOR.map((f) => fieldHTML(f)).join('')}</div>
+      body: `<button type="button" class="guarantor-toggle" id="guarantorToggle" data-act="guar-toggle" aria-expanded="false" aria-controls="guarantorPanel">
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></span>
+        <span><strong>연대보증인 · 제2운전자 정보 입력</strong><small>해당되는 경우에만 작성하시면 됩니다 (선택)</small></span>
+      </button>
+      <div class="guarantor-panel" id="guarantorPanel">
+      <div class="grid">${GUARANTOR.map((f) => fieldHTML(f)).join('')}</div>
       <div class="sign-grid" style="margin-top:14px">
         <div class="sig-card">
           <div class="sig-card-head"><strong>제2운전자 서명</strong><span class="sig-state" id="sigState-guarantor">서명 전</span></div>
@@ -449,6 +454,7 @@
           <div class="sig-card-head"><strong>연대보증인 안내</strong></div>
           <p style="font-size:12.5px;color:#6b7a90;line-height:1.6">연대보증인은 임차인의 채무를 함께 부담합니다. 성명과 연락처, 서명(선택)을 남겨 주세요. 계약서에는 임차인과 함께 기재됩니다.</p>
         </div>
+      </div>
       </div>`
     });
 
@@ -1114,6 +1120,13 @@
         const key = btn.dataset.target;
         if (pads[key]) pads[key].clear();
         toast('서명을 지웠습니다.');
+      } else if (act === 'guar-toggle') {
+        const panel = $('#guarantorPanel');
+        const open = !panel.classList.contains('open');
+        panel.classList.toggle('open', open);
+        $('#guarantorToggle').setAttribute('aria-expanded', String(open));
+        $('#guarantorToggle').classList.toggle('on', open);
+        if (open) setTimeout(() => { const f = $('#f_gName'); if (f) f.focus({ preventScroll: true }); }, 60);
       } else if (act === 'photo-camera') {
         $('#fileCamera').click();
       } else if (act === 'photo-gallery') {
@@ -1174,6 +1187,11 @@
     initPads();
     bindEvents();
     refreshProgress();
+    if (state.fields.gName || state.fields.gHp || state.fields.gRrn || state.fields.gAddr) {
+      const panel = $('#guarantorPanel');
+      const btn = $('#guarantorToggle');
+      if (panel && btn) { panel.classList.add('open'); btn.classList.add('on'); btn.setAttribute('aria-expanded', 'true'); }
+    }
     $('#adminPanel').hidden = !state.admin;
     $('#adminToggle').setAttribute('aria-pressed', String(state.admin));
     if (state.admin) refreshAdminLink();

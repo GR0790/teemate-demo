@@ -404,8 +404,11 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 }
 .guarantor-toggle .chev{
   width:26px;height:26px;border-radius:50%;background:#f2f6fb;
-  display:grid;place-items:center;flex:0 0 auto;transition:transform .2s;
+  display:grid;place-items:center;flex:0 0 auto;transition:transform .2s,background .2s;
 }
+.guarantor-toggle.on .chev{transform:rotate(180deg);background:#e6effa}
+.guarantor-toggle strong{display:block;font-size:13.5px;color:#33415a}
+.guarantor-toggle small{display:block;font-size:11.5px;color:#8592a6;font-weight:500;margin-top:2px}
 .guarantor-toggle .chev svg{width:14px;height:14px;color:#5d7090}
 .guarantor-panel{display:none;margin-top:16px}
 .guarantor-panel.open{display:block}
