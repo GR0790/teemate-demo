@@ -494,7 +494,7 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 .pv-bar .pv-title{flex:1 1 auto;text-align:center;font-size:14px;font-weight:800;color:#26354c}
 .pv-bar .btn{height:42px;padding:0 14px;font-size:13.5px}
 .pv-body{
-  flex:1 1 auto;overflow:auto;-webkit-overflow-scrolling:touch;
+  flex:1 1 auto;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;
   padding:18px clamp(10px,3vw,24px) 40px;
 }
 .pv-hint{
@@ -695,11 +695,25 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
   .ab-text span{font-size:11px}
   .ab-inner .btn-primary{height:48px;padding:0 16px;font-size:14px}
   .p-branches{grid-template-columns:1fr 1fr;gap:1px 10px;font-size:8.4px}
-  .paper{padding:16px 13px;border-radius:0;font-size:11px}
-  .p-title{font-size:19px;letter-spacing:.1em}
-  .pt th,.pt td{font-size:9.8px;padding:3px 4px}
-  .p-terms li{font-size:9.8px}
+  .paper{padding:14px 11px;border-radius:0;font-size:10.5px}
+  .p-title{font-size:17px;letter-spacing:.08em;padding:6px 0 8px}
+  .p-title span{font-size:6.5px;letter-spacing:.2em}
+  .pt{table-layout:auto}
+  .pt col{width:auto !important}
+  .pt th,.pt td{font-size:8.8px;padding:2.5px 3px;letter-spacing:-.02em}
+  .pt .col-k{width:auto}
+  .pt .sub{display:none}
+  .p-branches{font-size:7.6px;gap:0 8px}
+  .p-terms li{font-size:8.9px;line-height:1.45}
+  .p-terms h2{font-size:12px}
+  .p-alert,.p-alert.two > span{font-size:8.4px;padding:3px 6px}
   .p-alert.two{grid-template-columns:1fr}
+  .p-privacy p{font-size:8.2px}
+  .p-items{font-size:8.4px}
+  .p-items .tag{padding:1px 4px;font-size:8.2px}
+  .p-sigimg{height:32px}
+  .p-license img{max-height:76px}
+  .p-foot{font-size:7.6px}
   .p-dmg-grid{gap:4px 8px}
   .pv-hint{font-size:11px}
 }
