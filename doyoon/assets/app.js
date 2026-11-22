@@ -94,31 +94,25 @@
 
   const CAR_SVG = {
     front: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="150" cy="118" rx="90" ry="5" fill="#eef2f7"/>
-      <path d="M62 101c0-16 5-25 18-29l16-8c8-18 27-27 54-27s46 9 54 27l16 8c13 4 18 13 18 29 0 5-4 8-10 8H72c-6 0-10-3-10-8Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
-      <path d="M105 63c8-15 25-21 45-21s37 6 45 21" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
-      <path d="M64 73c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M236 73c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M67 79h34l-3 9H67Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M233 79h-34l3 9h31Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M118 78h64l3 13h-70Z" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M124 83h52M123 88h54" stroke="#a8b7c9" stroke-width="1.4"/>
-      <path d="M120 95h60l-2 6h-56Z" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.6" stroke-linejoin="round"/>
-      <path d="M78 101h144" stroke="#a8b7c9" stroke-width="1.6"/>
-      <rect x="133" y="94" width="34" height="9" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
+      <ellipse cx="150" cy="119" rx="92" ry="5" fill="#eef2f7"/>
+      <path d="M54 104c0-16 6-30 20-34l16-5c9-19 30-29 60-29s51 10 60 29l16 5c14 4 20 18 20 34 0 5-4 7-11 7H65c-7 0-11-2-11-7Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M109 63c2-9 6-16 12-22 9-3 18-4 29-4s20 1 29 4c6 6 10 13 12 22Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M94 66h112" stroke="#c8d3e0" stroke-width="1.5"/>
+      <path d="M62 76h32l-5 11H62Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M238 76h-32l5 11h27Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <rect x="117" y="80" width="66" height="12" rx="3" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8"/>
+      <path d="M123 84h54M123 88h54" stroke="#a8b7c9" stroke-width="1.3"/>
+      <path d="M74 107h152" stroke="#c8d3e0" stroke-width="1.6"/>
     </svg>`,
     rear: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="150" cy="118" rx="90" ry="5" fill="#eef2f7"/>
-      <path d="M62 101c0-16 5-25 18-29l16-8c8-18 27-27 54-27s46 9 54 27l16 8c13 4 18 13 18 29 0 5-4 8-10 8H72c-6 0-10-3-10-8Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
-      <path d="M100 60c10-10 27-14 50-14s40 4 50 14c4 5 3 15 3 21H97c0-6-1-16 3-21Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
-      <path d="M64 73c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M236 73c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M67 77h36l-2 11H67Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M233 77h-36l2 11h34Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M118 78h64l2 12h-68Z" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
-      <path d="M125 84h50" stroke="#a8b7c9" stroke-width="1.4"/>
-      <path d="M80 95h140" stroke="#a8b7c9" stroke-width="1.6"/>
-      <rect x="128" y="95" width="44" height="11" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
+      <ellipse cx="150" cy="119" rx="92" ry="5" fill="#eef2f7"/>
+      <path d="M54 104c0-16 6-30 20-34l16-5c9-19 30-29 60-29s51 10 60 29l16 5c14 4 20 18 20 34 0 5-4 7-11 7H65c-7 0-11-2-11-7Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M103 61c7-9 21-14 47-14s40 5 47 14c2 4 1 10 1 14H102c0-4-1-10 1-14Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M63 77h32v12H63Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M237 77h-32v12h32Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M77 94h146" stroke="#c8d3e0" stroke-width="1.5"/>
+      <rect x="127" y="97" width="46" height="11" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
+      <path d="M74 109h152" stroke="#c8d3e0" stroke-width="1.6"/>
     </svg>`,
     driver: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <ellipse cx="150" cy="118" rx="104" ry="5" fill="#eef2f7"/>
