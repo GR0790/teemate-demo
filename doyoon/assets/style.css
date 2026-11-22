@@ -678,7 +678,7 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 @media (min-width:1180px){
   .grid-3 .field.half{grid-column:span 4}
 }
-@media (max-width:719px){
+@media screen and (max-width:719px){
   body{font-size:15.5px;padding-bottom:104px}
   .card-head{padding:16px 16px 12px;display:grid;grid-template-columns:30px 1fr;gap:2px 12px;align-items:start}
   .card-head .step{grid-column:1;grid-row:1}
