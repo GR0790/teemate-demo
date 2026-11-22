@@ -96,7 +96,7 @@ button{font-family:inherit}
   font-size:clamp(24px,5.2vw,34px);
   letter-spacing:-.03em;font-weight:800;line-height:1.2;
 }
-.head-sub{margin-top:8px;font-size:14px;color:#c3d8f0;max-width:46ch}
+.head-sub{margin-top:8px;font-size:14px;color:#c3d8f0;max-width:64ch}
 .head-sub b{color:#fff;font-weight:600}
 
 .branches{
@@ -664,6 +664,7 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
 @media (min-width:720px){
   .field.span-4{grid-column:span 4}
   .grid{gap:16px 18px}
+  .branches{flex-wrap:wrap;overflow-x:visible}
 }
 @media (min-width:1180px){
   .grid-3 .field.half{grid-column:span 4}

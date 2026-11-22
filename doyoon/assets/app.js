@@ -95,34 +95,34 @@
   const CAR_SVG = {
     front: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <ellipse cx="150" cy="118" rx="90" ry="5" fill="#eef2f7"/>
-      <path d="M60 100c0-15 5-24 18-27l16-8c8-18 28-26 56-26s48 8 56 26l16 8c13 3 18 12 18 27 0 6-4 9-11 9H71c-7 0-11-3-11-9Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
-      <path d="M103 63c8-14 26-20 47-20s39 6 47 20" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
-      <path d="M64 72c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M236 72c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="68" y="76" width="34" height="13" rx="6.5" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="198" y="76" width="34" height="13" rx="6.5" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="113" y="78" width="74" height="16" rx="4" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M122 83h56M122 88h56" stroke="#a8b7c9" stroke-width="1.4"/>
-      <path d="M74 101h152" stroke="#a8b7c9" stroke-width="1.6"/>
-      <rect x="130" y="101" width="40" height="9" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
-      <path d="M84 109v5h20M216 109v5h-20" stroke="#5b6b80" stroke-width="2"/>
+      <path d="M62 101c0-16 5-25 18-29l16-8c8-18 27-27 54-27s46 9 54 27l16 8c13 4 18 13 18 29 0 5-4 8-10 8H72c-6 0-10-3-10-8Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M105 63c8-15 25-21 45-21s37 6 45 21" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
+      <path d="M64 73c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
+      <path d="M236 73c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
+      <path d="M67 79h34l-3 9H67Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M233 79h-34l3 9h31Z" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M118 78h64l3 13h-70Z" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M124 83h52M123 88h54" stroke="#a8b7c9" stroke-width="1.4"/>
+      <path d="M120 95h60l-2 6h-56Z" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M78 101h144" stroke="#a8b7c9" stroke-width="1.6"/>
+      <rect x="133" y="94" width="34" height="9" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
     </svg>`,
     rear: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <ellipse cx="150" cy="118" rx="90" ry="5" fill="#eef2f7"/>
-      <path d="M60 100c0-15 5-24 18-27l16-8c8-18 28-26 56-26s48 8 56 26l16 8c13 3 18 12 18 27 0 6-4 9-11 9H71c-7 0-11-3-11-9Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
-      <path d="M101 56c9-9 27-13 49-13s40 4 49 13c4 5 3 14 3 20H98c0-6-1-15 3-20Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
-      <path d="M64 72c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M236 72c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="66" y="76" width="36" height="15" rx="4" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="198" y="76" width="36" height="15" rx="4" fill="#ffffff" stroke="#5b6b80" stroke-width="1.8"/>
-      <rect x="120" y="82" width="60" height="20" rx="3" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8"/>
-      <path d="M128 88h44M128 95h44" stroke="#a8b7c9" stroke-width="1.4"/>
-      <path d="M74 104h152" stroke="#a8b7c9" stroke-width="1.6"/>
-      <path d="M84 111v4h20M216 111v4h-20" stroke="#5b6b80" stroke-width="2"/>
+      <path d="M62 101c0-16 5-25 18-29l16-8c8-18 27-27 54-27s46 9 54 27l16 8c13 4 18 13 18 29 0 5-4 8-10 8H72c-6 0-10-3-10-8Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M100 60c10-10 27-14 50-14s40 4 50 14c4 5 3 15 3 21H97c0-6-1-16 3-21Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="2"/>
+      <path d="M64 73c-6-1-10 2-10 7s4 7 10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
+      <path d="M236 73c6-1 10 2 10 7s-4 7-10 6" fill="#f2f6fb" stroke="#5b6b80" stroke-width="1.8"/>
+      <path d="M67 77h36l-2 11H67Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M233 77h-36l2 11h34Z" fill="#f4f7fb" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M118 78h64l2 12h-68Z" fill="#eef3f9" stroke="#5b6b80" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M125 84h50" stroke="#a8b7c9" stroke-width="1.4"/>
+      <path d="M80 95h140" stroke="#a8b7c9" stroke-width="1.6"/>
+      <rect x="128" y="95" width="44" height="11" rx="2" fill="#ffffff" stroke="#5b6b80" stroke-width="1.4"/>
     </svg>`,
     driver: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <ellipse cx="150" cy="118" rx="104" ry="5" fill="#eef2f7"/>
-      <path d="M18 94c0-9 6-14 17-16l24-5c10-18 28-27 56-28h32c27 1 44 9 56 21l26 6c14 3 22 7 22 16v5c0 4-3 6-7 6H25c-4 0-7-2-7-6v-1Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M22 92c0-9 5-14 15-16l24-5c10-18 28-27 56-28h32c27 1 44 9 56 21l26 6c14 3 22 7 22 16v5c0 4-3 6-7 6H25c-4 0-7-2-7-6v-1Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
       <path d="M76 73c8-14 23-21 47-22h9v22H76Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="1.9"/>
       <path d="M137 51h29c20 1 33 7 42 22h-71V51Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="1.9"/>
       <path d="M137 51v22M132 73h76" stroke="#5b6b80" stroke-width="1.7"/>
@@ -132,13 +132,13 @@
       <circle cx="74" cy="96" r="6.5" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.7"/>
       <circle cx="216" cy="96" r="17" fill="#ffffff" stroke="#5b6b80" stroke-width="2.2"/>
       <circle cx="216" cy="96" r="6.5" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.7"/>
-      <path d="M40 84h16" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
-      <path d="M258 82h14" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
+      <path d="M24 80c-4 2-5 6-3 9" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
+      <path d="M258 78c4 2 5 6 3 9" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
     </svg>`,
     passenger: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <g transform="translate(300,0) scale(-1,1)">
         <ellipse cx="150" cy="118" rx="104" ry="5" fill="#eef2f7"/>
-        <path d="M18 94c0-9 6-14 17-16l24-5c10-18 28-27 56-28h32c27 1 44 9 56 21l26 6c14 3 22 7 22 16v5c0 4-3 6-7 6H25c-4 0-7-2-7-6v-1Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M22 92c0-9 5-14 15-16l24-5c10-18 28-27 56-28h32c27 1 44 9 56 21l26 6c14 3 22 7 22 16v5c0 4-3 6-7 6H25c-4 0-7-2-7-6v-1Z" fill="#f8fbfe" stroke="#5b6b80" stroke-width="2.2" stroke-linejoin="round"/>
         <path d="M76 73c8-14 23-21 47-22h9v22H76Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="1.9"/>
         <path d="M137 51h29c20 1 33 7 42 22h-71V51Z" fill="#e9eff7" stroke="#5b6b80" stroke-width="1.9"/>
         <path d="M137 51v22M132 73h76" stroke="#5b6b80" stroke-width="1.7"/>
@@ -148,8 +148,8 @@
         <circle cx="74" cy="96" r="6.5" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.7"/>
         <circle cx="216" cy="96" r="17" fill="#ffffff" stroke="#5b6b80" stroke-width="2.2"/>
         <circle cx="216" cy="96" r="6.5" fill="#f1f5f9" stroke="#5b6b80" stroke-width="1.7"/>
-        <path d="M40 84h16" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
-        <path d="M258 82h14" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
+        <path d="M24 80c-4 2-5 6-3 9" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
+        <path d="M258 78c4 2 5 6 3 9" stroke="#5b6b80" stroke-width="2" stroke-linecap="round"/>
       </g>
     </svg>`
   };
@@ -175,9 +175,9 @@
     { k: 'inAt', label: '반차일시', type: 'datetime' , m: 'half'},
     { k: 'inDoneAt', label: '반차완료일시', type: 'datetime' , m: 'half'},
     { k: 'fee', label: '총사용요금', type: 'money', ph: '0', suffix: '원' , m: 'half'},
-    { k: 'fuel', label: '연료', type: 'radio', opts: [['LPG', 'LPG'], ['경유', '경유'], ['휘발유', '휘발유']] , m: 'half'},
     { k: 'kmNow', label: '현재KM', type: 'num', ph: '예) 45,120', suffix: 'km', m: 'half' },
     { k: 'kmIn', label: '반차KM', type: 'num', ph: '반차 시 입력', suffix: 'km', m: 'half' },
+    { k: 'fuel', label: '연료', type: 'radio', opts: [['LPG', 'LPG'], ['경유', '경유'], ['휘발유', '휘발유']] },
     { k: 'tank', label: '배차 시 연료량', type: 'radio', opts: [['E', 'E'], ['1/4', '1/4'], ['2/4', '2/4'], ['3/4', '3/4'], ['F', 'F']], help: '배차 시 연료 게이지 위치를 선택해 주세요.' },
     { k: 'carIns', label: '자차보험 추가가입', type: 'radio', opts: [['가입', '가입'], ['미가입', '미가입']], m: 'half' },
     { k: 'deductible', label: '자차면책금', type: 'money', suffix: '원', ph: '예) 500,000', m: 'half' },
