@@ -1160,7 +1160,8 @@
         refreshAdminLink();
       });
       $('#btnOpenLink').addEventListener('click', () => {
-        window.open(buildLink(), '_blank', 'noopener');
+        const w = window.open(buildLink(), '_blank', 'noopener');
+        if (!w) location.href = buildLink();
       });
       $('#adminLink').addEventListener('focus', (e) => e.target.select());
     }
@@ -1195,6 +1196,7 @@
     $('#adminPanel').hidden = !state.admin;
     $('#adminToggle').setAttribute('aria-pressed', String(state.admin));
     if (state.admin) refreshAdminLink();
+    if (state.locked && $('#btnDemo')) $('#btnDemo').hidden = true;
     if (state.locked) {
       const note = $('#sec-vehicle .ch-text p');
       if (note) note.textContent = '배차담당자가 입력한 정보입니다. 내용이 다르면 지점으로 연락해 주세요.';
