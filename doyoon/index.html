@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c2545">
+<title>도윤렌트카 | 차량임대차계약서</title>
+<meta name="description" content="도윤렌트카 차량임대차계약서를 휴대폰으로 작성하고 전자서명으로 제출하세요. 차량 손상 표시, 면허증 첨부, PDF 저장까지 한 번에.">
+<meta property="og:title" content="도윤렌트카 | 차량임대차계약서">
+<meta property="og:description" content="배차 정보 확인부터 전자서명까지, 휴대폰으로 한 번에 작성하는 도윤렌트카 전자계약서.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c2545'/%3E%3Ctext x='16' y='22' font-size='14' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EDY%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="head-top">
+      <a class="logo" href="./">
+        <span class="logo-mark">DY</span>
+        <span class="logo-text"><strong>도윤렌트카</strong><span>DOYOON RENTCAR</span></span>
+      </a>
+      <button class="admin-toggle" id="adminToggle" type="button" aria-pressed="false" title="배차담당자용 링크를 만듭니다">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 3 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.2-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 10 4.6a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.7 1.7 0 0 0 21 11a2 2 0 1 1 0 4 1.7 1.7 0 0 0-1.6 0Z"/></svg>
+        <span>배차담당자</span>
+      </button>
+    </div>
+
+    <div class="head-title">
+      <p class="eyebrow">VEHICLE RENTAL AGREEMENT</p>
+      <h1>차량임대차계약서</h1>
+      <p class="head-sub">배차 정보 확인부터 <b>전자서명</b>까지, 휴대폰으로 3분 만에 작성합니다.</p>
+    </div>
+
+    <ul class="branches" id="branchList"></ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="quick-facts">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>약 3분 소요</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>전자서명 · 인쇄 · PDF</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>차량 손상 4면 표시</span>
+  </div>
+
+  <section class="admin-panel" id="adminPanel" hidden>
+    <div class="ap-head"><span class="ap-tag">ADMIN</span><strong>배차담당자용 링크 만들기</strong></div>
+    <p class="ap-desc">아래 <b>01 차량 · 배차 정보</b>와 손상 표시를 입력하면, 그 값이 그대로 채워진 <b>고객용 링크</b>가 만들어집니다. 고객은 링크를 열어 임차인 정보와 서명만 하면 됩니다.</p>
+    <div class="ap-link">
+      <input class="inp" id="adminLink" readonly aria-label="고객용 링크">
+      <button class="btn btn-primary" id="btnCopyLink" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        고객용 링크 복사
+      </button>
+      <button class="btn" id="btnOpenLink" type="button">새 창에서 열기</button>
+    </div>
+    <p class="ap-note"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#1f5bb5;display:inline-block"></span>링크에는 차량 정보만 담깁니다. 고객의 개인정보(주민등록번호·면허증 사진)는 링크에 포함되지 않습니다. <span id="adminLinkLen" style="color:#9aa8ba"></span></p>
+  </section>
+
+  <form id="contractForm" novalidate autocomplete="on">
+    <div id="formRoot"></div>
+  </form>
+
+  <p class="foot-note">
+    도윤렌트카 전자계약서 · 입력한 내용은 이 브라우저에 임시 저장되며(주민등록번호·면허증 사진 제외), 계약서 확인 후 인쇄 또는 PDF로 저장할 수 있습니다.<br>
+    서울건대점 02-467-2120 · 부산지점 010-8708-1154 · 안산지점 010-7338-2135 · 영등포지점 010-3444-1995 · DMC지점 010-4146-0434 · 부산서면지점 010-9402-4405
+  </p>
+</main>
+
+<div class="actionbar">
+  <div class="ab-progress"><span class="ab-fill" id="abFill"></span></div>
+  <div class="ab-inner">
+    <div class="ab-text">
+      <strong id="abTitle">작성 중</strong>
+      <span id="abSub">필수 항목 0/7 완료</span>
+    </div>
+    <button class="btn btn-primary" id="btnPreview" type="button">
+      계약서 확인 · 저장
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="preview" id="preview" hidden>
+  <div class="pv-bar">
+    <button class="btn" id="btnBack" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>
+      수정하기
+    </button>
+    <span class="pv-title">계약서 미리보기</span>
+    <button class="btn btn-primary" id="btnPrint" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M8 17h8v4H8z"/></svg>
+      인쇄 · PDF 저장
+    </button>
+  </div>
+  <div class="pv-body">
+    <p class="pv-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      인쇄 창에서 대상을 <b>‘PDF로 저장’</b>으로 선택하면 PDF 파일로 보관할 수 있습니다.
+    </p>
+    <div id="paperRoot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
