@@ -769,7 +769,7 @@
     const pct = Math.round((done / list.length) * 100);
     $('#abFill').style.width = pct + '%';
     $('#abSub').textContent = done === list.length
-      ? '필수 항목을 모두 작성했습니다. 계약서를 확인해 주세요.'
+      ? '필수 항목 작성 완료 · 계약서를 확인하세요'
       : `필수 항목 ${done}/${list.length} 완료`;
     $('#abTitle').textContent = done === list.length ? '작성 완료' : '작성 중';
     $('#signChip').textContent = state.sig.renter ? '서명 완료' : '서명 전';
