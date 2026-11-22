@@ -122,7 +122,7 @@ button{font-family:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(14px,4vw,32px)}
 .quick-facts{
   display:flex;flex-wrap:wrap;gap:8px;
-  margin:-16px 0 22px;position:relative;z-index:2;
+  margin:20px 0 22px;position:relative;z-index:2;
 }
 .quick-facts span{
   display:inline-flex;align-items:center;gap:6px;
@@ -173,6 +173,7 @@ button{font-family:inherit}
 /* ---------- fields ---------- */
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px 16px}
 .field{grid-column:span 12;min-width:0}
+.field.half{grid-column:span 6}
 .field.span-6{grid-column:span 6}
 .field.span-4{grid-column:span 4}
 .field.span-8{grid-column:span 8}
@@ -664,13 +665,15 @@ textarea.inp{height:auto;padding:12px 14px;resize:vertical;line-height:1.5}
   .field.span-4{grid-column:span 4}
   .grid{gap:16px 18px}
 }
+@media (min-width:1180px){
+  .grid-3 .field.half{grid-column:span 4}
+}
 @media (max-width:719px){
   body{font-size:15.5px;padding-bottom:104px}
   .card-head{padding:16px 16px 12px}
   .card-body{padding:16px}
   .grid{gap:12px}
   .field.span-6,.field.span-4,.field.span-8{grid-column:span 12}
-  .field.half{grid-column:span 6}
   .dmg-grid{gap:8px}
   .checks{grid-template-columns:1fr}
   .sign-grid{grid-template-columns:1fr}

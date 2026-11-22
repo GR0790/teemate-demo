@@ -171,11 +171,11 @@
     { k: 'accidentMgr', label: '담당', ph: '예) 김도윤', m: 'half' },
     { k: 'car', label: '차명', ph: '예) 쏘나타 DN8', m: 'half' },
     { k: 'carNo', label: '차량번호', ph: '예) 12가 3456', m: 'half' },
-    { k: 'outAt', label: '배차일시', type: 'datetime' },
-    { k: 'inAt', label: '반차일시', type: 'datetime' },
-    { k: 'inDoneAt', label: '반차완료일시', type: 'datetime' },
-    { k: 'fee', label: '총사용요금', type: 'money', ph: '0', suffix: '원' },
-    { k: 'fuel', label: '연료', type: 'radio', opts: [['LPG', 'LPG'], ['경유', '경유'], ['휘발유', '휘발유']] },
+    { k: 'outAt', label: '배차일시', type: 'datetime' , m: 'half'},
+    { k: 'inAt', label: '반차일시', type: 'datetime' , m: 'half'},
+    { k: 'inDoneAt', label: '반차완료일시', type: 'datetime' , m: 'half'},
+    { k: 'fee', label: '총사용요금', type: 'money', ph: '0', suffix: '원' , m: 'half'},
+    { k: 'fuel', label: '연료', type: 'radio', opts: [['LPG', 'LPG'], ['경유', '경유'], ['휘발유', '휘발유']] , m: 'half'},
     { k: 'kmNow', label: '현재KM', type: 'num', ph: '예) 45,120', suffix: 'km', m: 'half' },
     { k: 'kmIn', label: '반차KM', type: 'num', ph: '반차 시 입력', suffix: 'km', m: 'half' },
     { k: 'tank', label: '배차 시 연료량', type: 'radio', opts: [['E', 'E'], ['1/4', '1/4'], ['2/4', '2/4'], ['3/4', '3/4'], ['F', 'F']], help: '배차 시 연료 게이지 위치를 선택해 주세요.' },
@@ -204,7 +204,7 @@
     { k: 'gName', label: '성명', ph: '예) 김보증', m: 'half' },
     { k: 'gHp', label: 'H.P', ph: '010-0000-0000', type: 'phone', m: 'half' },
     { k: 'gRrn', label: '주민등록번호', ph: '000000-0000000', type: 'rrn' },
-    { k: 'gLicNo', label: '운전면허번호', ph: '00-00-000000-00', type: 'lic' },
+    { k: 'gLicNo', label: '운전면허번호', ph: '00-00-000000-00', type: 'lic', m: 'half' },
     { k: 'gTel', label: '전화번호', ph: '02-000-0000', type: 'phone', m: 'half' },
     { k: 'gAddr', label: '주소', ph: '도로명 주소', type: 'textarea', rows: 2 }
   ];
@@ -368,7 +368,7 @@
         ? '배차담당자가 입력한 정보입니다. 내용이 다르면 지점으로 연락해 주세요.'
         : '배차 정보와 손상 상태를 확인해 주세요. 차량 그림을 탭하면 손상 위치에 X가 표시됩니다.',
       tag: lockChip,
-      body: `<div class="grid">${VEHICLE.map((f) => fieldHTML(f)).join('')}</div>${carBlockHTML()}`
+      body: `<div class="grid grid-3">${VEHICLE.map((f) => fieldHTML(f)).join('')}</div>${carBlockHTML()}`
     });
 
     const terms = sectionHTML({
